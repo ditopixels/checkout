@@ -1,0 +1,27 @@
+footer{
+    .page-footer {
+        @include flex;
+        width: 80%;
+        margin: 0 auto;
+        &__copyright{
+            font-family: 'FiraSansRegular';
+            color:#666666;
+            text-align:right ;
+            width: 50%;
+        }
+        &__policy{
+            font-family: 'FiraSansRegular';
+            text-transform: uppercase;
+            color:#404040;
+            text-align: left;
+            width: 50%;
+            ul{
+                li{
+                    display: inline-block;
+                    font-size: 11px;
+                    margin:0 3px;
+                }
+            }
+        }
+    }
+}
