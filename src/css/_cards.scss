@@ -3,6 +3,18 @@
 #payment-data{
      border: 1px solid $grayLight !important;
      box-shadow: none;
+     padding: 20px !important;
+     .accordion-toggle.collapsed{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    #go-to-shipping{
+        width: 100%;
+    }
+    >.client-profile-data.accordion-group.step{
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
 }
 .vtex-omnishipping-1-x-shippingSectionTitle{
     color: $black !important;
@@ -23,7 +35,19 @@
 .orderform-template-holder>div::before{
     order: 1;
 }
-@media screen and (min-width:640px) {
+.shipping .payment-data .form-step, .profile .payment-data .form-step{
+    display: none !important;
+}
+@media screen and (max-width:770px) {
+    .container-main>.checkout-container>.orderform-template>.orderform-template-holder #shipping-data{
+        margin-bottom: 0 !important;
+    }
+    div#payment-data.payment-data{
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and (min-width:770px) {
     #client-profile-data{
         width: 50% !important;
         float: left;

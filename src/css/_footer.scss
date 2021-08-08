@@ -1,27 +1,26 @@
 footer{
-    .page-footer {
-        @include flex;
-        width: 80%;
-        margin: 0 auto;
-        &__copyright{
-            font-family: 'FiraSansRegular';
-            color:#666666;
-            text-align:right ;
-            width: 50%;
-        }
-        &__policy{
-            font-family: 'FiraSansRegular';
-            text-transform: uppercase;
-            color:#404040;
-            text-align: left;
-            width: 50%;
-            ul{
-                li{
-                    display: inline-block;
-                    font-size: 11px;
-                    margin:0 3px;
-                }
-            }
+    display: flex;
+    justify-content: space-between;
+    padding:0 2rem;
+    align-items:center;
+    p{
+        color: #3D3D3D;
+        font-weight: 300;
+    }
+    .text-check{
+        display: none;
+    }
+}
+@media screen and (max-width:770px) {
+    footer{
+        padding: 0 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .text-check{
+            display: flex;
         }
     }
 }
+

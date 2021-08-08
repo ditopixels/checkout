@@ -10,16 +10,21 @@ export function setGeneral(){
 
     document.querySelector('.accordion-toggle > span').textContent = "Datos personales"
     let x = document.querySelector('.accordion-toggle > span')
-    console.log('AHHHHHHH', x)
 }
 
 export function loadTargets (){
     setGeneral()
+    const headerCart = d.querySelector('a.header-cart')
+    const breadcrumb = d.querySelector('div.breadcrumb')
+    breadcrumb.style.display = null
+    headerCart.style.display = null
     switch (location.hash) {
         case "#/email":
             console.log("desde email")
             deleteSections()
             showEmail()
+            headerCart.style.display = 'flex'
+            breadcrumb.style.display = 'none'
             break;
         case "#/profile":
             console.log("desde profile")
@@ -35,6 +40,10 @@ export function loadTargets (){
             console.log("desde payment")
             deleteEmail()
             showSections()
+            break;
+        case "#/cart":
+            console.log("desde cart")
+            document.body.style.overflowY = 'auto'
             break;
     }
 }
@@ -94,4 +103,33 @@ export function loadBreadCrumb () {
     breadcrumb.appendChild(navPayment)
 
     panel.insertAdjacentElement('beforebegin',breadcrumb)
+}
+
+export function loadBackToCart () {
+    const headerCart = d.createElement('a')
+    const wrapperCart = d.createElement('div')
+    const cart = d.createElement('img')
+    const back = d.createElement('span')
+    const myCart = d.createElement('span')
+
+    cart.src = 'https://sanisidrolonasar.vtexassets.com/assets/vtex/assets-builder/sanisidrolonasar.sanisidrolonasar-site-vtex/0.2.1/svg/minicard___93dbf2d9fd767e61837ccd89c7ea349a.svg'
+    cart.classList.add('cart')
+
+    back.textContent = 'VOLVER AL CARRITO'
+    back.classList.add('back')
+    
+    headerCart.href='#/cart'
+
+    myCart.textContent = 'MI CARRITO'
+    
+    wrapperCart.appendChild(cart)
+    wrapperCart.appendChild(myCart)
+
+    headerCart.classList.add('header-cart')
+    headerCart.appendChild(wrapperCart)
+    headerCart.appendChild(back)
+
+    const container = d.querySelector('.container-main')
+
+    container.insertAdjacentElement('beforebegin',headerCart)
 }

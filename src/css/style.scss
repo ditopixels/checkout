@@ -113,14 +113,6 @@ color:#fff !important;
 border:none !important;
 }
 
-.btn-link{
-  border: 1px solid #008cbe !important;
-}
-
-.input-small{
-max-width:30% !important;
-}
-
 .shipping-data .accordion-toggle::before{
 content: 'B';
   /*background: url('../image/profile-icon.svg');*/
@@ -167,7 +159,7 @@ border:none;
 color:none; 
 }
 
- .go-to-cart-button{ display:none; } #ship-postalCode{ max-width: 30%; } .back-to-address-list{ border: 1px solid #008cbe; background: #008cbe; color:#fff; } #cart-to-orderform{ background:#008cbe; color:#fff !important; border:none !important; } #cart-coupon-add{ background:#008cbe; color:#fff !important; border:none !important; } .btn-link{ border: 1px solid #008cbe !important; }
+ .go-to-cart-button{ display:none; } #ship-postalCode{ max-width: 30%; } .back-to-address-list{ border: 1px solid #008cbe; background: #008cbe; color:#fff; } #cart-to-orderform{ background:#008cbe; color:#fff !important; border:none !important; } #cart-coupon-add{ background:#008cbe; color:#fff !important; border:none !important; } 
 
 
 
@@ -253,9 +245,6 @@ border:none;
 color:none; 
 }
 
-#client-profile-data{
-width:100% !important
-}
 
 .ship-postalCode .input-small{
   max-width: 30% !important;
@@ -274,25 +263,35 @@ font-size:16px !important;
 }
 
 .orderform-template .cart-template.mini-cart #go-to-cart-button{
-position:unset !important;
-order:9;
-color: #000 !important;
-text-align:center !important;
-font-size:18px !important;
-letter-spacing: 1px;
-text-decoration: none;
-text-transform: uppercase; 
-font-weight:  500;
+  position:unset !important;
+  order:9;
+  color: #000 !important;
+  text-align:center !important;
+  font-size:13px !important;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase; 
+  font-weight:  500;
+  padding: 16px 32px !important;
 }
 
 .orderform-template .cart-template.mini-cart #go-to-cart-button a{
-position: relative;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  margin: 0 auto;
 }
 
 .orderform-template .cart-template.mini-cart #go-to-cart-button a::before{
-  content: 'A';
-  color: #000;
+  content: '';
+  background-image: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg');
+  width: 12px;
+  height: 12px;
+  background-size: 100%;
   position: absolute;
+  transform: rotate(-180deg);
   left:-20px;
 }
 
@@ -301,4 +300,8 @@ position: relative;
 .custom-cart-template-wrap{
 display:flex !important;
 flex-direction: column !important;
+}
+
+.orderform-template-holder #client-profile-data>form.form-page.client-pre-email.noneImportant{
+  display: none !important;
 }
