@@ -1,12 +1,13 @@
 /*@import "default";*/
 
-$gray:#666666;
+$nuevo-color: #fff;
+$gray: #666666;
 $darkGray: #404040;
-$grayLight:#cccccc;
-$white:#ffffff;
-$black:#000;
-$primary-color:#008CBE;
-$primary-color-hover: #43BCF1;
+$grayLight: #cccccc;
+$white: #ffffff;
+$black: #000;
+$primary-color: #008cbe;
+$primary-color-hover: #43bcf1;
 
 @import "fonts.scss";
 @import "mixins.scss";
@@ -16,266 +17,335 @@ $primary-color-hover: #43BCF1;
 @import "cards";
 @import "breadcrumb";
 
-a{
-  color:$darkGray !important;
+a {
+  color: $darkGray !important;
   text-decoration: none;
 }
-li{
+li {
   list-style: none;
 }
-body{
-  background:#f7f7f7;
+body {
+  background: #f7f7f7;
 }
 
-
-#btn-go-to-payment{
+#btn-go-to-payment {
   margin-left: 0;
   margin-right: 0;
   width: 100%;
   margin-top: 20px;
-background:#018dbb !important;
-border:none !important;
+  background: #018dbb !important;
+  border: none !important;
 }
 
-.shp-lean-option{
-background:#f2f2f2 !important;
+.shp-lean-option {
+  background: #f2f2f2 !important;
 }
 
-
-.vtex-omnishipping-1-x-address .text label{
+.vtex-omnishipping-1-x-address .text label {
   position: relative;
 }
 
-
-.vtex-omnishipping-1-x-address .text label::after{
+.vtex-omnishipping-1-x-address .text label::after {
   position: absolute;
-  content: '*';
+  content: "*";
   color: #999999;
-  top:0;
-
-
+  top: 0;
 }
 
-.accordion-toggle{
-  color:#008CBE !important
+.accordion-toggle {
+  color: #008cbe !important;
 }
 
-.client-profile-email{
+.client-profile-email {
   margin-bottom: 0 !important;
-color:#5D5D5D !important;
+  color: #5d5d5d !important;
 }
 
-.client-profile-summary{
-color:#5D5D5D !important;
+.client-profile-summary {
+  color: #5d5d5d !important;
 }
 
-
-.vtex-omnishipping-1-x-svg{
-  fill:#008CBE;
+.vtex-omnishipping-1-x-svg {
+  fill: #008cbe;
 }
 
-.client-profile-data .accordion-toggle > span::before{
-  content: 'A';
+.client-profile-data .accordion-toggle > span::before {
+  content: "A";
   /*background: url('../image/profile-icon.svg');*/
   width: 29px;
   height: 29px;
   object-fit: contain;
   left: 0;
-  border:none;
+  border: none;
   background: transparent;
-  color:none;
+  color: none;
 }
 
-.go-to-cart-button{
-  display:none;  
+.go-to-cart-button {
+  display: none;
 }
 
-
-#ship-postalCode{
+#ship-postalCode {
   max-width: 30%;
 }
 
-.back-to-address-list{
+.back-to-address-list {
   border: 1px solid #008cbe;
   background: #008cbe;
-  color:#fff;
+  color: #fff;
 }
 
-#cart-to-orderform{
-background:#008cbe;
-color:#fff !important;
-border:none !important;
+#cart-to-orderform {
+  background: #008cbe;
+  color: #fff !important;
+  border: none !important;
 }
 
-#cart-coupon-add{
-background:#008cbe;
-color:#fff !important;
-border:none !important;
+#cart-coupon-add {
+  background: #008cbe;
+  color: #fff !important;
+  border: none !important;
 }
 
-.shipping-data .accordion-toggle::before{
-content: 'B';
+.shipping-data .accordion-toggle::before {
+  content: "B";
   /*background: url('../image/profile-icon.svg');*/
   width: 29px;
   height: 29px;
   object-fit: contain;
   left: 0;
-  border:none;
-  color:none !important;
+  border: none;
+  color: none !important;
 }
 
-.monetary{
-color:#000 !important;
-font-size:17px !important;
+.monetary {
+  color: #000 !important;
+  font-size: 17px !important;
 }
 
-.info{
-font-size:17px !important;
-text-transform: uppercase;
+.info {
+  font-size: 17px !important;
+  text-transform: uppercase;
 }
 
-.cart-template{
-background:#fff !important;
+.cart-template {
+  background: #fff !important;
 }
 
-.btn-success{
-background:#008CBE !important;
-color:#fff !important;
-border:none !important;
+.btn-success {
+  background: #008cbe !important;
+  color: #fff !important;
+  border: none !important;
 }
 
-#btn-go-to-payment{ margin-left: 0; margin-right: 0; width: 100%; margin-top: 20px; background:#018dbb !important; border:none !important; } .shp-lean-option{ background:#f2f2f2 !important; } .vtex-omnishipping-1-x-address .text label{ position: relative; } .vtex-omnishipping-1-x-address .text label::after{ position: absolute; content: '*'; color: #999999; top:0; } .accordion-toggle{ color:#008CBE !important } .client-profile-email{ margin-bottom: 0 !important; color:#5D5D5D !important; } .client-profile-summary{ color:#5D5D5D !important; } .vtex-omnishipping-1-x-svg{ fill:#008CBE; }
-
-.client-profile-data .accordion-toggle > span::before{ 
-content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important; 
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+#btn-go-to-payment {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  margin-top: 20px;
+  background: #018dbb !important;
+  border: none !important;
+}
+.shp-lean-option {
+  background: #f2f2f2 !important;
+}
+.vtex-omnishipping-1-x-address .text label {
+  position: relative;
+}
+.vtex-omnishipping-1-x-address .text label::after {
+  position: absolute;
+  content: "*";
+  color: #999999;
+  top: 0;
+}
+.accordion-toggle {
+  color: #008cbe !important;
+}
+.client-profile-email {
+  margin-bottom: 0 !important;
+  color: #5d5d5d !important;
+}
+.client-profile-summary {
+  color: #5d5d5d !important;
+}
+.vtex-omnishipping-1-x-svg {
+  fill: #008cbe;
 }
 
- .go-to-cart-button{ display:none; } #ship-postalCode{ max-width: 30%; } .back-to-address-list{ border: 1px solid #008cbe; background: #008cbe; color:#fff; } #cart-to-orderform{ background:#008cbe; color:#fff !important; border:none !important; } #cart-coupon-add{ background:#008cbe; color:#fff !important; border:none !important; } 
-
-
-
- .shipping-data .accordion-toggle::before{
- content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+.client-profile-data .accordion-toggle > span::before {
+  content: "";
+  background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
 }
 
- .monetary{ color:#000 !important; font-size:17px !important; } .info{ font-size:17px !important; text-transform: uppercase; } .cart-template{ background:#fff !important; } .btn-success{ background:#008CBE !important; color:#fff !important; border:none !important; } 
-
-.payment-data .accordion-toggle > span:not(.payment-edit-link)::before{
-   content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+.go-to-cart-button {
+  display: none;
+}
+#ship-postalCode {
+  max-width: 30%;
+}
+.back-to-address-list {
+  border: 1px solid #008cbe;
+  background: #008cbe;
+  color: #fff;
+}
+#cart-to-orderform {
+  background: #008cbe;
+  color: #fff !important;
+  border: none !important;
+}
+#cart-coupon-add {
+  background: #008cbe;
+  color: #fff !important;
+  border: none !important;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-option:hover, .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-leanShippingOptionActive, .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-leanShippingOption{
-background:#f2f2f2 !important;
+.shipping-data .accordion-toggle::before {
+  content: "";
+  background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
 }
 
-.orderform-template .custom-cart-template-wrap{
+.monetary {
+  color: #000 !important;
+  font-size: 17px !important;
+}
+.info {
+  font-size: 17px !important;
+  text-transform: uppercase;
+}
+.cart-template {
+  background: #fff !important;
+}
+.btn-success {
+  background: #008cbe !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.payment-data .accordion-toggle > span:not(.payment-edit-link)::before {
+  content: "";
+  background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
+}
+
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-option:hover,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-leanShippingOptionActive,
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-leanShippingOption {
+  background: #f2f2f2 !important;
+}
+
+.orderform-template .custom-cart-template-wrap {
   box-shadow: 0px 0px 10px #0000004f;
 }
 
-.orderform-template .cart-template.mini-cart h2{
+.orderform-template .cart-template.mini-cart h2 {
   text-align: center !important;
   border-bottom: 1px solid #ebebeb;
 }
 
-.input-block-level{
-font-size: 14px !important;
-max-width: 75% !important;
-margin-right: 20px !important;
+.input-block-level {
+  font-size: 14px !important;
+  max-width: 75% !important;
+  margin-right: 20px !important;
 }
 
-.client-pre-email .emailInfo > h3{
-color:#000 !important;
+.client-pre-email .emailInfo > h3 {
+  color: #000 !important;
 }
 
-.emailInfo{
-text-align: center !important;
+.emailInfo {
+  text-align: center !important;
 }
 
-.client-pre-email .client-email.input.text .btn-success{
-position:relative !important;
-bottom:0 !important;
-min-width: unset !important;
-left:40px !important;
-top: unset !important;
-height:40px !important;
-padding:0 !important;
+.client-pre-email .client-email.input.text .btn-success {
+  position: relative !important;
+  bottom: 0 !important;
+  min-width: unset !important;
+  left: 40px !important;
+  top: unset !important;
+  height: 40px !important;
+  padding: 0 !important;
 }
 
-.icon-lock{
-display:none;
+.icon-lock {
+  display: none;
 }
 
-.client-pre-email h3.client-pre-email-h span::before{
-   content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+.client-pre-email h3.client-pre-email-h span::before {
+  content: "";
+  background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
 }
 
-
-.ship-postalCode .input-small{
+.ship-postalCode .input-small {
   max-width: 30% !important;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsOption.vtex-omnishipping-1-x-deliveryOptionActive{
-background: #008cbe !important;
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsOption.vtex-omnishipping-1-x-deliveryOptionActive {
+  background: #008cbe !important;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsOption{
-background:#eeeeee !important;
+.orderform-template-holder
+  .step.shipping-data
+  .vtex-omnishipping-1-x-deliveryChannelsOption {
+  background: #eeeeee !important;
 }
 
-.vtex-omnishipping-1-x-deliveryChannelsComplement{
-font-size:16px !important;
+.vtex-omnishipping-1-x-deliveryChannelsComplement {
+  font-size: 16px !important;
 }
 
-.orderform-template .cart-template.mini-cart #go-to-cart-button{
-  position:unset !important;
-  order:9;
+.orderform-template .cart-template.mini-cart #go-to-cart-button {
+  position: unset !important;
+  order: 9;
   color: #000 !important;
-  text-align:center !important;
-  font-size:13px !important;
+  text-align: center !important;
+  font-size: 13px !important;
   letter-spacing: 1px;
   text-decoration: none;
-  text-transform: uppercase; 
-  font-weight:  500;
+  text-transform: uppercase;
+  font-weight: 500;
   padding: 16px 32px !important;
 }
 
-.orderform-template .cart-template.mini-cart #go-to-cart-button a{
+.orderform-template .cart-template.mini-cart #go-to-cart-button a {
   position: relative;
   display: flex;
   align-items: center;
@@ -284,24 +354,24 @@ font-size:16px !important;
   margin: 0 auto;
 }
 
-.orderform-template .cart-template.mini-cart #go-to-cart-button a::before{
-  content: '';
-  background-image: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg');
+.orderform-template .cart-template.mini-cart #go-to-cart-button a::before {
+  content: "";
+  background-image: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg");
   width: 12px;
   height: 12px;
   background-size: 100%;
   position: absolute;
   transform: rotate(-180deg);
-  left:-20px;
+  left: -20px;
 }
 
-
-
-.custom-cart-template-wrap{
-display:flex !important;
-flex-direction: column !important;
+.custom-cart-template-wrap {
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-.orderform-template-holder #client-profile-data>form.form-page.client-pre-email.noneImportant{
+.orderform-template-holder
+  #client-profile-data
+  > form.form-page.client-pre-email.noneImportant {
   display: none !important;
 }
