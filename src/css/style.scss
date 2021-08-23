@@ -1,14 +1,4 @@
-/*@import "default";*/
-
-$nuevo-color: #fff;
-$gray: #666666;
-$darkGray: #404040;
-$grayLight: #cccccc;
-$white: #ffffff;
-$black: #000;
-$primary-color: #008cbe;
-$primary-color-hover: #43bcf1;
-
+@import "colores.scss";
 @import "fonts.scss";
 @import "mixins.scss";
 @import "footer.scss";
@@ -16,7 +6,7 @@ $primary-color-hover: #43bcf1;
 @import "general.scss";
 @import "cards";
 @import "breadcrumb";
-
+@import "CartHeader";
 a {
   color: $darkGray !important;
   text-decoration: none;
@@ -130,6 +120,16 @@ body {
 
 .cart-template {
   background: #fff !important;
+  .summary-template-holder {
+    box-shadow: -7px 0 5px -5px #0000004a;
+    z-index: 0;
+    margin-top: -10px;
+    padding-block-start: 3em;
+    position: static;
+    #cart-to-orderform {
+      border-radius: 0 !important;
+    }
+  }
 }
 
 .btn-success {
@@ -227,9 +227,6 @@ body {
 .info {
   font-size: 17px !important;
   text-transform: uppercase;
-}
-.cart-template {
-  background: #fff !important;
 }
 .btn-success {
   background: #008cbe !important;
@@ -375,4 +372,47 @@ body {
   #client-profile-data
   > form.form-page.client-pre-email.noneImportant {
   display: none !important;
+}
+
+.body-cart-vertical .cart-template-holder {
+  width: 70% !important;
+}
+
+.coupon-fields {
+  span {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    padding-inline-start: 3.5em;
+    input {
+      border-radius: 0 !important;
+      max-width: 160px;
+    }
+    button {
+      border-radius: 0 !important;
+      max-width: 124px;
+      min-width: 124px;
+    }
+  }
+  .info {
+    display: none !important;
+  }
+}
+
+.summary-template-holder tbody {
+  border: 0 !important;
+}
+
+.table {
+  width: 100%;
+  tfoot {
+    border-top: 2px solid #dfdfdfcf;
+    position: relative;
+    display: grid;
+    left: -20px;
+    width: 115%;
+    tr {
+      padding-inline-end: 37px;
+      padding-inline-start: 20px;
+    }
+  }
 }

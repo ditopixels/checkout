@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production --watch"
   },
   "keywords": [],
   "author": "diego rincon diego_9231@hotmail.com",
