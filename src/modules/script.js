@@ -16,6 +16,8 @@ export function loadTargets (){
     setGeneral()
     const headerCart = d.querySelector('a.header-cart')
     const breadcrumb = d.querySelector('div.breadcrumb')
+    const footer = d.querySelector('body > footer')
+
     breadcrumb.style.display = null
     headerCart.style.display = null
     switch (location.hash) {
@@ -23,27 +25,37 @@ export function loadTargets (){
             console.log("desde email")
             deleteSections()
             showEmail()
+            document.body.classList.add('blanco')
             headerCart.style.display = 'flex'
             breadcrumb.style.display = 'none'
+            if(footer)footer.style.display = 'flex'
             break;
         case "#/profile":
             console.log("desde profile")
             deleteEmail()
             showSections()
+            if(footer)footer.style.display = null
+            document.body.classList.remove('blanco')
             break;
         case "#/shipping":
             console.log("desde shipping")
+            if(footer)footer.style.display = null
+            document.body.classList.remove('blanco')
             deleteEmail()
             showSections()
             break;
         case "#/payment":
             console.log("desde payment")
+            if(footer)footer.style.display = null
+            document.body.classList.remove('blanco')
             deleteEmail()
             showSections()
             break;
         case "#/cart":
             console.log("desde cart")
             document.body.style.overflowY = 'auto'
+            document.body.classList.add('blanco')
+            if(footer)footer.style.display = 'flex'
             break;
     }
 }
@@ -132,4 +144,13 @@ export function loadBackToCart () {
     const container = d.querySelector('.container-main')
 
     container.insertAdjacentElement('beforebegin',headerCart)
+}
+
+export function loadFooter () {
+    const panel = d.querySelector(".orderform-template-holder > .row-fluid")
+    const footer = d.createElement('footer')
+
+    footer.innerHTML = '<div class="text-check"><svg xmlns="http://www.w3.org/2000/svg" id="_x31__x2C_5" enable-background="new 0 0 24 24" height="20" viewBox="0 0 24 24" width="20"><path fill="currentColor" d="m18.75 24h-13.5c-1.24 0-2.25-1.009-2.25-2.25v-10.5c0-1.241 1.01-2.25 2.25-2.25h13.5c1.24 0 2.25 1.009 2.25 2.25v10.5c0 1.241-1.01 2.25-2.25 2.25zm-13.5-13.5c-.413 0-.75.336-.75.75v10.5c0 .414.337.75.75.75h13.5c.413 0 .75-.336.75-.75v-10.5c0-.414-.337-.75-.75-.75z"/><path fill="currentColor" d="m17.25 10.5c-.414 0-.75-.336-.75-.75v-3.75c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5v3.75c0 .414-.336.75-.75.75s-.75-.336-.75-.75v-3.75c0-3.309 2.691-6 6-6s6 2.691 6 6v3.75c0 .414-.336.75-.75.75z"/><path fill="currentColor" d="m12 17c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm0-2.5c-.275 0-.5.224-.5.5s.225.5.5.5.5-.224.5-.5-.225-.5-.5-.5z"/><path fill="currentColor" d="m12 20c-.414 0-.75-.336-.75-.75v-2.75c0-.414.336-.75.75-.75s.75.336.75.75v2.75c0 .414-.336.75-.75.75z"/></svg><h2 class="txt-header">Compra 100% segura</h2></div><p>© SAN ISIDRO LONAS 2021. TODOS LOS DERECHOS RESERVADOS.</p><img src="/arquivos/s1.png">'
+
+    panel.insertAdjacentElement('beforeend',footer)
 }
