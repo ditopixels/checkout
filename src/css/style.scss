@@ -416,3 +416,53 @@ body {
     }
   }
 }
+
+.quantity {
+  order: 1;
+  margin-right: 65px;
+}
+.product-price {
+  order: 0;
+  margin-right: 8em;
+}
+.item-remove {
+  order: 5;
+}
+.table.cart-items thead tr th.product {
+  width: calc(87% - 352px) !important;
+}
+.product-price {
+  order: 2;
+  margin-left: 19px;
+}
+
+.v-custom-product-item-wrap {
+  .quantity {
+    margin-left: 63px;
+    input {
+      display: none;
+    }
+    .item-unit-label {
+      order: 1;
+      margin: 0px 4px;
+    }
+    #item-quantity-change-decrement-783 {
+      background-color: #f2f2f2;
+      width: 40px;
+      height: 30px;
+    }
+    #item-quantity-change-increment-783 {
+      order: 2;
+      background-color: #9b9b9b;
+      width: 40px;
+      height: 30px;
+    }
+  }
+  .quantity-price {
+    margin-left: 48px;
+  }
+
+  .item-remove {
+    padding-block-start: 31px;
+  }
+}
