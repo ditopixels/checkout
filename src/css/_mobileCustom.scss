@@ -1,0 +1,14 @@
+@import "colores.scss";
+@media (max-width: 750px) {
+  .header-cart {
+    display: none !important;
+  }
+  .body-cart-vertical.cart-template-holder {
+    width: auto !important;
+  }
+}
+@media (min-width: 997px) {
+  .body-cart-vertical .cart-template-holder {
+    width: 70% !important;
+  }
+}

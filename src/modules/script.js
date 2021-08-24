@@ -23,10 +23,21 @@ export function setGeneral() {
 }
 
 export function loadTargets() {
+  let count = 0;
   setGeneral();
   const headerCart = d.querySelector("a.header-cart");
   const breadcrumb = d.querySelector("div.breadcrumb");
   const footer = d.querySelector("body > footer");
+  const containerBuyBtn = d.querySelector(".cart-links-bottom");
+  const backToStore = d.createElement("a")
+  backToStore.href =  "/"
+  backToStore.classList.add("back-to-store")
+  backToStore.textContent = "ELEGIR MÁS PRODUCTOS"
+  if(containerBuyBtn && count!=0) {
+
+    containerBuyBtn.appendChild(backToStore)
+    count=count+1;
+  }
 
   breadcrumb.style.display = null;
   headerCart.style.display = null;
@@ -45,7 +56,6 @@ export function loadTargets() {
   
   switch (location.hash) {
     case "#/email":
-      console.log("desde email");
       deleteSections();
       showEmail();
       document.body.classList.add("blanco");
@@ -55,6 +65,7 @@ export function loadTargets() {
       break;
     case "#/profile":
       console.log("desde profile");                     
+        //Para modificar el input del móvil:            
         var inputArea = document.getElementById('client-phone1');
         var inputTel = document.getElementById('client-phone3');
         var arealabel = document.createElement("Label");
@@ -126,21 +137,18 @@ export function loadTargets() {
       document.body.classList.remove("blanco");
       break;
     case "#/shipping":
-      console.log("desde shipping");
       if (footer) footer.style.display = null;
       document.body.classList.remove("blanco");
       deleteEmail();
       showSections();
       break;
     case "#/payment":
-      console.log("desde payment");
       if (footer) footer.style.display = null;
       document.body.classList.remove("blanco");
       deleteEmail();
       showSections();
       break;
     case "#/cart":
-      console.log("desde cart");
       document.body.style.overflowY = "auto";
       document.body.classList.add("blanco");
       if (footer) footer.style.display = "flex";
