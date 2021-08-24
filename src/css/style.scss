@@ -123,7 +123,6 @@ body {
 .cart-template {
   background: #fff !important;
   .summary-template-holder {
-    box-shadow: -7px 0 5px -5px #0000004a;
     z-index: 0;
     margin-top: -10px;
     padding-block-start: 3em;
@@ -131,6 +130,11 @@ body {
     #cart-to-orderform {
       border-radius: 0 !important;
     }
+  }
+}
+.body.body-cart .cart-template {
+  .summary-template-holder {
+    box-shadow: -7px 0 5px -5px #0000004a;
   }
 }
 

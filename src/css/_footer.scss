@@ -30,4 +30,18 @@ footer{
         }
     }
 }
-
+@media screen and (min-width:770px) {
+    body.body-cart{
+        footer{
+            padding:0 0rem;
+            p{
+                margin-left: 2rem;
+            }
+            img{
+                margin-right: calc(2rem + 30%);
+                margin-top:10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
