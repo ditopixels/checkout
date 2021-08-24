@@ -417,7 +417,11 @@ tbody.totalizers-list tr td {
   font-size: 13px !important;
   color: #666 !important;
 }
-
+tbody.totalizers-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
 .card-flag.Naranja {
   background-image: url("/arquivos/naranja.png");
   background-repeat: no-repeat;
