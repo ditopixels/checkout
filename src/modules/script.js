@@ -28,7 +28,7 @@ export function loadTargets (){
             document.body.classList.add('blanco')
             headerCart.style.display = 'flex'
             breadcrumb.style.display = 'none'
-            if(footer)footer.style.display = 'flex'
+            if(footer)footer.style.display = 'flex'            
             break;
         case "#/profile":
             console.log("desde profile")
@@ -36,6 +36,16 @@ export function loadTargets (){
             showSections()
             if(footer)footer.style.display = null
             document.body.classList.remove('blanco')
+
+            //Para modificar el input del móvil:
+            var input = document.createElement("input");
+            input.type = "text";
+            input.className = "custom input";
+
+            let section = document.getElementsByClassName('argentina-phone')[0];
+            section.appendChild(input);
+            console.log("SECTION: ", section);
+                        
             break;
         case "#/shipping":
             console.log("desde shipping")
@@ -47,7 +57,7 @@ export function loadTargets (){
         case "#/payment":
             console.log("desde payment")
             if(footer)footer.style.display = null
-            document.body.classList.remove('blanco')
+            document.body.classList.remove('blanco')            
             deleteEmail()
             showSections()
             break;

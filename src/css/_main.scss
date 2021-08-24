@@ -1,0 +1,165 @@
+.orderform-template .cart-template.mini-cart .summary-template-holder .summary>.summary-coupon-wrap{
+    display: none !important;
+}
+
+/* Para que no haya un salto en volver al carrito */
+.orderform-template .cart-template.mini-cart #go-to-cart-button a {
+    white-space: nowrap;
+}
+
+/* Para que se muestre el precio de entrega */
+/*
+.totalizers-list > .Shipping{
+    display: flex !important;
+}
+*/
+
+/* De los bordes del resumen del total */
+.orderform-template .cart-template.mini-cart .summary-totalizers tbody {
+    border-top: none !important;
+}
+
+.summary-template-holder tbody {
+    border-top: none !important;
+}
+
+/* De la cantidad */
+.mini-cart.cart-template .cart-fixed .custom-cart-template-wrap .cart .quantity.badge {
+    top: 0px !important;    
+}
+
+.mini-cart .quantity{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    box-shadow: none;
+    color: #5D5D5D;
+}
+
+.orderform-template .cart-template.mini-cart .quantity{
+    color: #5D5D5D !important;
+}
+
+.summary-cart-template-holder .product-name{
+    font-weight: normal !important;
+}
+
+.summary-cart-template-holder .quantity::before{
+    content: 'Cantidad:';
+    color: #5D5D5D;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.orderform-template .cart-template.mini-cart .quantity {
+    background: transparent;
+    color: black;
+}
+
+.badge {    
+    font-weight: normal;        
+    background-color: white;
+    padding: 0px;
+    border: none !important;
+}
+
+/* De la imagen */
+.cart-items img{
+    width: 60px;
+    height: 70px;    
+}
+
+/* Shipping date */
+.shipping-date{
+    display: none !important;
+}
+
+/* Total price */
+.mini-cart .description {
+    margin-top: 0px;
+}
+
+/* Para reorganizar los cuadros de pasos en la opción de payment */
+.orderform-template-holder.payment{  
+    .container-main>.checkout-container>.orderform-template>.orderform-template-holder>div.row-fluid {
+        height: calc(100vh - 77px - 15px) !important;
+    }
+
+    .row-fluid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content;                
+    }
+
+    #payment-data{
+        grid-column: span 2;
+        width: 101% !important;
+    }    
+
+    @media screen and (min-width: 770px){
+        #client-profile-data {
+            width:100% !important;
+        }
+    
+        div#shipping-data.shipping-data {
+            width:100% !important;
+        }
+    }
+}
+
+/* Del breadcrum */
+.breadcrumb {
+    padding: 13px 15px;
+}
+
+/* De las opciones de pago en el cuadro payment */
+.required.payment-group-list-btn .payment-group-item span::before {
+    position: absolute;
+    display: block;
+    right: 15px;
+    content: "";
+    color: #9B9B9B;
+    font-size: 15px;
+    background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowGray.svg);
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+    margin-top: 2px;
+}
+
+.required.payment-group-list-btn .payment-group-item.active span::before {
+    position: absolute;
+    display: block;
+    right: 15px;
+    content: "";
+    color: #9B9B9B;
+    font-size: 15px;
+    background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg);
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+    margin-top: 2px;
+}
+
+/* del paso del email */
+.client-pre-email-h span{
+    white-space: nowrap;
+}
+
+#btn-client-pre-email{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.client-pre-email .btn-success {
+    font-size: 14px;
+}
+
+/* Del teléfono en datos personales */
+.client-phone-mobile{
+    display: none;
+}
+
+.client-phone-prefix, .client-phone-suffix{
+    display: none;
+}

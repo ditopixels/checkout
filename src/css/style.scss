@@ -15,6 +15,7 @@ $primary-color-hover: #43BCF1;
 @import "general.scss";
 @import "cards";
 @import "breadcrumb";
+@import "_main.scss";
 
 a{
   color:$darkGray !important;
@@ -55,11 +56,11 @@ background:#f2f2f2 !important;
 
 
 }
-
+/*
 .accordion-toggle{
   color:#008CBE !important
 }
-
+*/
 .client-profile-email{
   margin-bottom: 0 !important;
 color:#5D5D5D !important;
@@ -148,7 +149,8 @@ border:none !important;
 
 .client-profile-data .accordion-toggle > span::before{ 
 content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important; 
+/*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;*/
+background: url('https://ray2--sanisidrolonasar.myvtex.com/arquivos/iconProfileGray.svg') !important;
 background-size: 40px 40px !important;
 width: 40px; 
 height: 40px;
@@ -165,7 +167,8 @@ color:none;
 
  .shipping-data .accordion-toggle::before{
  content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;
+/*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;*/
+background: url('https://ray2--sanisidrolonasar.myvtex.com/arquivos/icnTruckGray.svg') !important;
 background-size: 40px 40px !important;
 width: 40px; 
 height: 40px;
@@ -180,7 +183,8 @@ color:none;
 
 .payment-data .accordion-toggle > span:not(.payment-edit-link)::before{
    content: ''; 
-background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;
+/*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;*/
+background: url('https://ray2--sanisidrolonasar.myvtex.com/arquivos/iconcardGray.svg') !important;
 background-size: 40px 40px !important;
 width: 40px; 
 height: 40px;
@@ -305,4 +309,114 @@ flex-direction: column !important;
 
 .orderform-template-holder #client-profile-data>form.form-page.client-pre-email.noneImportant{
   display: none !important;
+}
+
+/* De los pasos del pago (Texto) */
+.accordion-toggle {
+  color: #9B9B9B !important;
+}
+
+.orderform-template-holder.profile{  
+  #client-profile-data .accordion-toggle{
+    color: #008CBE !important;
+  }    
+}
+
+.orderform-template-holder.shipping{
+  #shipping-data .accordion-toggle{
+    color: #008CBE !important;
+  }  
+  #client-profile-data .accordion-toggle{
+    color: #008CBE !important;
+  }    
+}
+
+.orderform-template-holder.payment .accordion-toggle{
+  color: #008CBE !important;
+}
+
+/* De los pasos del pago imagen */
+.orderform-template-holder.profile{  
+  #client-profile-data .accordion-toggle > span::before{    
+    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;
+    content: '';
+    background-size: 40px 40px !important;
+    width: 40px; 
+    height: 40px;
+    object-fit: contain; 
+    left: 0; 
+    border:none;
+    background: transparent; 
+    color:none; 
+  }   
+}
+
+.orderform-template-holder.shipping{
+  
+  #shipping-data .accordion-toggle::before{
+    content: '';    
+    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;
+    background-size: 40px 40px !important;
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+    left: 0; 
+    border:none;
+     background: transparent;
+    color:none;     
+  }
+
+  #client-profile-data .accordion-toggle > span::before{
+    content: '';
+    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;
+    background-size: 40px 40px !important;
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+    left: 0; 
+    border:none;
+     background: transparent; 
+    color:none;     
+  }   
+}
+
+.orderform-template-holder.payment{    
+  #payment-data .accordion-toggle > span:not(.payment-edit-link)::before{
+    content: '';  
+    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px !important;
+    object-fit: contain; 
+    left: 0; 
+    border:none;
+    background: transparent; 
+    color:none; 
+  }
+
+  #shipping-data .accordion-toggle::before{
+    content: '';
+    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;
+    background-size: 40px 40px !important;
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+    left: 0; 
+    border:none;
+    background: transparent; 
+    color:none;     
+  }
+
+  #client-profile-data .accordion-toggle > span::before{
+    content: '';
+    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;
+    background-size: 40px 40px !important;
+    width: 40px;
+    height: 40px;    
+    object-fit: contain; 
+    left: 0; 
+    border:none;
+    background: transparent; 
+    color:none;     
+  }   
 }
