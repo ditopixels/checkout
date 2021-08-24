@@ -42,17 +42,21 @@ export function loadTargets() {
   breadcrumb.style.display = null;
   headerCart.style.display = null;
     
+
+  var argTelSection = document.getElementsByClassName('argentina-phone')[0];  
+  if(argTelSection){
+    var secInput = argTelSection.getElementsByClassName('input')[0];    
+    var labelArea = document.getElementsByClassName('custom-label-area')[0]; 
+    var labelTel = document.getElementsByClassName('custom-label-telefono')[0]; 
+    if(labelArea){
+      secInput.removeChild(labelArea);    
+    }
   
-  var telSection = document.getElementsByClassName('argentina-phone')[0].getElementsByClassName('input')[0];
-  var labelArea = document.getElementsByClassName('custom-label-area')[0]; 
-  var labelTel = document.getElementsByClassName('custom-label-telefono')[0]; 
-  if(labelArea){
-    telSection.removeChild(labelArea);    
+    if(labelTel){
+      secInput.removeChild(labelTel);
+    }
   }
 
-  if(labelTel){
-    telSection.removeChild(labelTel);
-  }
   
   switch (location.hash) {
     case "#/email":
@@ -74,9 +78,12 @@ export function loadTargets() {
         var tellabel = document.createElement("Label");
         tellabel.setAttribute("class","custom-label-telefono");
         tellabel.innerHTML = "No. teléfono";
-        var section = document.getElementsByClassName('argentina-phone')[0].getElementsByClassName('input')[0];
-        section.appendChild(arealabel);
-        section.appendChild(tellabel);
+        var section = document.getElementsByClassName('argentina-phone')[0];
+        if(section){
+            var inputSection = section.getElementsByClassName('input')[0]
+            inputSection.appendChild(arealabel);
+            inputSection.appendChild(tellabel);
+        }
 
         //Para modificar el input del móvil:    
         /*        

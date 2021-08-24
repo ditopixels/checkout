@@ -34,7 +34,7 @@
   .custom-cart-template-wrap
   .cart
   .quantity.badge {
-  top: 0px !important;
+  top: 0px !important;  
 }
 
 .mini-cart .quantity {
@@ -42,11 +42,12 @@
   top: 0px;
   left: 0px;
   box-shadow: none;
-  color: #5d5d5d;
+  color: #5d5d5d;  
 }
 
 .orderform-template .cart-template.mini-cart .quantity {
   color: #5d5d5d !important;
+  margin-left: 0px !important;
 }
 
 .summary-cart-template-holder .product-name {
@@ -237,11 +238,6 @@
   display: none;
 }
 
-#client-phone1, #client-phone3{
-    visibility: hidden;
-}
-*/
-
 /* Del modal */
 
 .modal.modal-payment-template{
@@ -352,9 +348,4 @@
 
 #client-phone3{
     order: 4;
-}
-
-#client-phone1,
-#client-phone3 {
-  visibility: hidden;
 }
