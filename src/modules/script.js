@@ -4,7 +4,7 @@ export function setHeader() {
   const panel = d.querySelector(".cart-template-holder");
   const selector = d.createElement("div");
   selector.innerHTML =
-    "<div class='cartHeader'> <img src='/arquivos/logo-cart.png'> <p>MI CARRITO</p> </div>";
+    "<div class='cartHeaderCustom'> <img src='/arquivos/logo-cart.png'> <p>MI CARRITO</p> </div>";
   //selector.innerText = "Hellow";
   panel.insertAdjacentElement("afterbegin", selector);
 }
@@ -29,14 +29,13 @@ export function loadTargets() {
   const breadcrumb = d.querySelector("div.breadcrumb");
   const footer = d.querySelector("body > footer");
   const containerBuyBtn = d.querySelector(".cart-links-bottom");
-  const backToStore = d.createElement("a")
-  backToStore.href =  "/"
-  backToStore.classList.add("back-to-store")
-  backToStore.textContent = "ELEGIR MÁS PRODUCTOS"
-  if(containerBuyBtn && count!=0) {
-
-    containerBuyBtn.appendChild(backToStore)
-    count=count+1;
+  const backToStore = d.createElement("a");
+  backToStore.href = "/";
+  backToStore.classList.add("back-to-store");
+  backToStore.textContent = "ELEGIR MÁS PRODUCTOS";
+  if (containerBuyBtn && count != 0) {
+    containerBuyBtn.appendChild(backToStore);
+    count = count + 1;
   }
 
   breadcrumb.style.display = null;
@@ -51,38 +50,37 @@ export function loadTargets() {
       if (footer) footer.style.display = "flex";
       break;
     case "#/profile":
-        //Para modificar el input del móvil:            
-        var inputArea = document.getElementById('client-phone1');
-        var inputTel = document.getElementById('client-phone3');
-        var input = document.createElement("input");
-        input.type = "text";
-        input.className = "custom-tel-input input-mini success";
-        input.value = inputArea.value || "" + " " + inputTel.value || "";
-        input.onkeypress = function (e) {
-            var tel = e.target.value;
+      //Para modificar el input del móvil:
+      var inputArea = document.getElementById("client-phone1");
+      var inputTel = document.getElementById("client-phone3");
+      var input = document.createElement("input");
+      input.type = "text";
+      input.className = "custom-tel-input input-mini success";
+      input.value = inputArea.value || "" + " " + inputTel.value || "";
+      input.onkeypress = function (e) {
+        var tel = e.target.value;
 
-            if(tel == ""){
-                inputArea.value = "";
-                inputTel.value = "";
-            }else{
-                var tels = tel.split(" ");
-                if(tels.length>1){                    
-                    inputArea.value = tels[0];
-                    inputTel.value = tels[1];
-                }else{
-                    inputArea.value = tels[0];
-                }
+        if (tel == "") {
+          inputArea.value = "";
+          inputTel.value = "";
+        } else {
+          var tels = tel.split(" ");
+          if (tels.length > 1) {
+            inputArea.value = tels[0];
+            inputTel.value = tels[1];
+          } else {
+            inputArea.value = tels[0];
+          }
 
-                console.log("tel: ", tel);
-                console.log("tels: ", tels);
-            }
+          console.log("tel: ", tel);
+          console.log("tels: ", tels);
         }
+      };
 
-        var section = document.getElementsByClassName('argentina-phone')[0];
-        console.log("SECTION: ", section);        
-        section.appendChild(input);
-        //...
-        
+      var section = document.getElementsByClassName("argentina-phone")[0];
+      console.log("SECTION: ", section);
+      section.appendChild(input);
+      //...
 
       deleteEmail();
       showSections();

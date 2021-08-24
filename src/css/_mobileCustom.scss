@@ -1,14 +1,24 @@
 @import "colores.scss";
 @media (max-width: 750px) {
-  .header-cart {
-    display: none !important;
-  }
   .body-cart-vertical.cart-template-holder {
     width: auto !important;
+  }
+  .v-custom-product-item-wrap {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 3em);
   }
 }
 @media (min-width: 997px) {
   .body-cart-vertical .cart-template-holder {
     width: 70% !important;
   }
+}
+/* 
+*Error doble barra del carrito
+*Se dejo la barra custom
+*/
+.header-cart {
+  display: none !important;
 }
