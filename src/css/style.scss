@@ -7,9 +7,10 @@
 @import "cards";
 @import "breadcrumb";
 @import "_main.scss";
+@import "CartHeader";
 
-a{
-  color:$darkGray !important;
+a {
+  color: $darkGray !important;
   text-decoration: none;
 }
 li {
@@ -47,7 +48,7 @@ body {
   color:#008CBE !important
 }
 */
-.client-profile-email{
+.client-profile-email {
   margin-bottom: 0 !important;
   color: #5d5d5d !important;
 }
@@ -139,20 +140,52 @@ body {
   border: none !important;
 }
 
-#btn-go-to-payment{ margin-left: 0; margin-right: 0; width: 100%; margin-top: 20px; background:#018dbb !important; border:none !important; } .shp-lean-option{ background:#f2f2f2 !important; } .vtex-omnishipping-1-x-address .text label{ position: relative; } .vtex-omnishipping-1-x-address .text label::after{ position: absolute; content: '*'; color: #999999; top:0; } .accordion-toggle{ color:#008CBE !important } .client-profile-email{ margin-bottom: 0 !important; color:#5D5D5D !important; } .client-profile-summary{ color:#5D5D5D !important; } .vtex-omnishipping-1-x-svg{ fill:#008CBE; }
+#btn-go-to-payment {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  margin-top: 20px;
+  background: #018dbb !important;
+  border: none !important;
+}
+.shp-lean-option {
+  background: #f2f2f2 !important;
+}
+.vtex-omnishipping-1-x-address .text label {
+  position: relative;
+}
+.vtex-omnishipping-1-x-address .text label::after {
+  position: absolute;
+  content: "*";
+  color: #999999;
+  top: 0;
+}
+.accordion-toggle {
+  color: #008cbe !important;
+}
+.client-profile-email {
+  margin-bottom: 0 !important;
+  color: #5d5d5d !important;
+}
+.client-profile-summary {
+  color: #5d5d5d !important;
+}
+.vtex-omnishipping-1-x-svg {
+  fill: #008cbe;
+}
 
-.client-profile-data .accordion-toggle > span::before{ 
-content: ''; 
-/*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;*/
-background: url('https://ray2--sanisidrolonasar.myvtex.com/arquivos/iconProfileGray.svg') !important;
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+.client-profile-data .accordion-toggle > span::before {
+  content: "";
+  /*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;*/
+  background: url("https://ray2--sanisidrolonasar.myvtex.com/arquivos/iconProfileGray.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
 }
 
 .client-profile-data .accordion-toggle > span::before {
@@ -190,18 +223,18 @@ color:none;
   border: none !important;
 }
 
- .shipping-data .accordion-toggle::before{
- content: ''; 
-/*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;*/
-background: url('https://ray2--sanisidrolonasar.myvtex.com/arquivos/icnTruckGray.svg') !important;
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+.shipping-data .accordion-toggle::before {
+  content: "";
+  /*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;*/
+  background: url("https://ray2--sanisidrolonasar.myvtex.com/arquivos/icnTruckGray.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
 }
 
 .monetary {
@@ -218,18 +251,18 @@ color:none;
   border: none !important;
 }
 
-.payment-data .accordion-toggle > span:not(.payment-edit-link)::before{
-   content: ''; 
-/*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;*/
-background: url('https://ray2--sanisidrolonasar.myvtex.com/arquivos/iconcardGray.svg') !important;
-background-size: 40px 40px !important;
-width: 40px; 
-height: 40px;
-object-fit: contain; 
-left: 0; 
-border:none;
- background: transparent; 
-color:none; 
+.payment-data .accordion-toggle > span:not(.payment-edit-link)::before {
+  content: "";
+  /*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;*/
+  background: url("https://ray2--sanisidrolonasar.myvtex.com/arquivos/iconcardGray.svg") !important;
+  background-size: 40px 40px !important;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: none;
 }
 
 .orderform-template-holder
@@ -366,11 +399,11 @@ color:none;
 .coupon-fields {
   span {
     display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    padding-inline-start: 3.5em;
+    grid-template-columns: 20em 1fr;
+    padding-inline-start: 0em;
+    grid-column-gap: 2em;
     input {
       border-radius: 0 !important;
-      max-width: 160px;
     }
     button {
       border-radius: 0 !important;
@@ -404,8 +437,8 @@ color:none;
 
 .quantity {
   order: 2 !important;
-  margin-right: 8em;
-  margin-left: 8em;
+  margin-right: 8em !important;
+  margin-left: 8em !important;
 }
 .quantity-price {
   order: 3 !important;
@@ -417,112 +450,111 @@ color:none;
 
 /* De los pasos del pago (Texto) */
 .accordion-toggle {
-  color: #9B9B9B !important;
+  color: #9b9b9b !important;
 }
 
-.orderform-template-holder.profile{  
-  #client-profile-data .accordion-toggle{
-    color: #008CBE !important;
-  }    
+.orderform-template-holder.profile {
+  #client-profile-data .accordion-toggle {
+    color: #008cbe !important;
+  }
 }
 
-.orderform-template-holder.shipping{
-  #shipping-data .accordion-toggle{
-    color: #008CBE !important;
-  }  
-  #client-profile-data .accordion-toggle{
-    color: #008CBE !important;
-  }    
+.orderform-template-holder.shipping {
+  #shipping-data .accordion-toggle {
+    color: #008cbe !important;
+  }
+  #client-profile-data .accordion-toggle {
+    color: #008cbe !important;
+  }
 }
 
-.orderform-template-holder.payment .accordion-toggle{
-  color: #008CBE !important;
+.orderform-template-holder.payment .accordion-toggle {
+  color: #008cbe !important;
 }
 
 /* De los pasos del pago imagen */
-.orderform-template-holder.profile{  
-  #client-profile-data .accordion-toggle > span::before{    
-    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;
-    content: '';
+.orderform-template-holder.profile {
+  #client-profile-data .accordion-toggle > span::before {
+    background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg") !important;
+    content: "";
     background-size: 40px 40px !important;
-    width: 40px; 
+    width: 40px;
     height: 40px;
-    object-fit: contain; 
-    left: 0; 
-    border:none;
-    background: transparent; 
-    color:none; 
-  }   
+    object-fit: contain;
+    left: 0;
+    border: none;
+    background: transparent;
+    color: none;
+  }
 }
 
-.orderform-template-holder.shipping{
-  
-  #shipping-data .accordion-toggle::before{
-    content: '';    
-    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;
+.orderform-template-holder.shipping {
+  #shipping-data .accordion-toggle::before {
+    content: "";
+    background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg") !important;
     background-size: 40px 40px !important;
     width: 40px;
     height: 40px;
-    object-fit: contain; 
-    left: 0; 
-    border:none;
-     background: transparent;
-    color:none;     
+    object-fit: contain;
+    left: 0;
+    border: none;
+    background: transparent;
+    color: none;
   }
 
-  #client-profile-data .accordion-toggle > span::before{
-    content: '';
-    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;
+  #client-profile-data .accordion-toggle > span::before {
+    content: "";
+    background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg") !important;
     background-size: 40px 40px !important;
     width: 40px;
     height: 40px;
-    object-fit: contain; 
-    left: 0; 
-    border:none;
-     background: transparent; 
-    color:none;     
-  }   
+    object-fit: contain;
+    left: 0;
+    border: none;
+    background: transparent;
+    color: none;
+  }
 }
 
-.orderform-template-holder.payment{    
-  #payment-data .accordion-toggle > span:not(.payment-edit-link)::before{
-    content: '';  
-    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg') !important;
+.orderform-template-holder.payment {
+  #payment-data .accordion-toggle > span:not(.payment-edit-link)::before {
+    content: "";
+    background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/d70906b3-95aa-4a21-ab3b-5bd1af0b2110___e41c3db79a414a4c3f9d4275d96ef47a.svg") !important;
     width: 40px;
     height: 40px;
     background-size: 40px 40px !important;
-    object-fit: contain; 
-    left: 0; 
-    border:none;
-    background: transparent; 
-    color:none; 
+    object-fit: contain;
+    left: 0;
+    border: none;
+    background: transparent;
+    color: none;
   }
 
-  #shipping-data .accordion-toggle::before{
-    content: '';
-    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;
+  #shipping-data .accordion-toggle::before {
+    content: "";
+    background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg") !important;
     background-size: 40px 40px !important;
     width: 40px;
     height: 40px;
-    object-fit: contain; 
-    left: 0; 
-    border:none;
-    background: transparent; 
-    color:none;     
+    object-fit: contain;
+    left: 0;
+    border: none;
+    background: transparent;
+    color: none;
   }
 
-  #client-profile-data .accordion-toggle > span::before{
-    content: '';
-    background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg') !important;
+  #client-profile-data .accordion-toggle > span::before {
+    content: "";
+    background: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/de6b62d1-4340-4300-8b6e-1930769e1577___f246401f4581869e17dc4db45309b381.svg") !important;
     background-size: 40px 40px !important;
     width: 40px;
-    height: 40px;    
-    object-fit: contain; 
-    left: 0; 
-    border:none;
-    background: transparent; 
-    color:none;     
-  }   
+    height: 40px;
+    object-fit: contain;
+    left: 0;
+    border: none;
+    background: transparent;
+    color: none;
+  }
 }
 /* ... */
 
@@ -557,39 +589,71 @@ color:none;
 
 .v-custom-product-item-wrap {
   .quantity {
-    margin-left: 63px;
+    margin-right: 22px !important;
+    margin-left: 45px !important;
+    border: none !important;
+    font-size: 16px !important;
     .item-unit-label {
       order: 1;
       margin: 0px 4px;
     }
-    #item-quantity-change-decrement-783 {
+    .item-quantity-change-decrement {
+      i::before {
+        color: #9b9b9b !important;
+        padding-block-start: 4px !important;
+        font-size: 38px !important;
+      }
+      margin-right: 1em;
       background-color: #f2f2f2;
-      width: 40px;
-      height: 30px;
+      width: 53px !important;
+      height: 38px !important;
     }
-    #item-quantity-change-increment-783 {
+    .item-quantity-change-increment {
+      i::before {
+        color: #f2f2f2 !important;
+        padding-block-start: 8px !important;
+        font-size: 38px !important;
+      }
+      margin-left: 1em;
       order: 2;
       background-color: #9b9b9b;
-      width: 40px;
-      height: 30px;
+      width: 53px !important;
+      height: 38px !important;
     }
   }
   .quantity-price {
-    margin-left: 48px;
+    margin-left: 31px !important;
   }
-
+  .product-price {
+    margin-left: 31px !important;
+  }
   .item-remove {
     padding-block-start: 31px;
   }
 }
 
-.table.cart-items td.quantity input {
-  display: none !important;
-}
 .table.cart-items tbody tr td.quantity-price {
   display: block !important;
   margin-left: 5em;
 }
 .new-product-real-price-per-unit {
+  display: none;
+}
+elemento {
+  display: grid !important;
+}
+
+.row-fluid.summary {
+  margin-top: 0em !important;
+  > div:nth-child(1) {
+    display: grid !important;
+    margin-bottom: 22em !important;
+  }
+}
+
+.cart-more-options {
+  display: none !important;
+}
+.transactions-container.row-fluid {
   display: none;
 }
