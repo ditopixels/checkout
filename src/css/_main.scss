@@ -34,7 +34,7 @@
   .custom-cart-template-wrap
   .cart
   .quantity.badge {
-  top: 0px !important;
+  top: 0px !important;  
 }
 
 .mini-cart .quantity {
@@ -42,11 +42,12 @@
   top: 0px;
   left: 0px;
   box-shadow: none;
-  color: #5d5d5d;
+  color: #5d5d5d;  
 }
 
 .orderform-template .cart-template.mini-cart .quantity {
   color: #5d5d5d !important;
+  margin-left: 0px !important;
 }
 
 .summary-cart-template-holder .product-name {
@@ -237,17 +238,114 @@
   display: none;
 }
 
-.client-phone.argentina-phone {
-  display: flex;
-  flex-direction: column-reverse;
+/* Del modal */
+
+.modal.modal-payment-template{
+    padding-top:20px;
+    padding-bottom:20px;
+    background: #fff;
+ }
+ 
+ .payment-confirmation-modal-body.default-modal{
+    color: #262626; 
+ }
+ 
+ .payment-confirmation-modal-body .payment-confirmation-content {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+  .payment-confirmation-thanks {
+    visibility: hidden;
+ }
+
+ .default-modal{
+     color: #262626 !important;
+ }
+ 
+.modal-body {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.client-phone.argentina-phone label {
-  margin-top: 15px;
-  order: 4;
+.default-modal-security.payment-confirmation-security{
+    position: relative !important;    
+    display: flex !important;
+    margin: 0 auto !important;
+    width: 45px !important;
+    background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/logo-cart.png) !important;
+    background-size: 45px 45px !important;
+    content: ' ' !important;
+    height: 45px !important;
 }
 
-#client-phone1,
-#client-phone3 {
-  visibility: hidden;
+ .payment-confirmation-thanks::after{
+    visibility: visible;
+    content:'¡Muchas gracias por tu compra!';
+    font-family: Barlow !important;
+    display: block;
+    position: relative;
+    margin-top: -30px;
+ }
+
+.payment-confirmation-loading{
+     display: none !important;
+}
+
+.payment-confirmation-message{
+    visibility: hidden;
+}
+
+.payment-confirmation-message::after{
+    font-size: 16px !important;
+    font-family: Barlow !important;
+    visibility: visible;    
+    content:'Estamos procesando tu pedido...';
+    display: block;
+    position: relative;
+    margin-top: -30px;    
+}
+
+/* De los input del teléfono */
+#client-phone1::before{
+    font-size: 16px !important;
+    font-family: Barlow !important;    
+    content:'Código de área';
+    display: block;
+    position: relative;    
+}
+
+#client-phone3::before{
+    font-size: 16px !important;
+    font-family: Barlow !important;
+    content:'No. teléfono';
+    display: block;
+    position: relative;           
+}
+
+.argentina-phone{
+   margin-top: 15px;
+}
+
+.argentina-phone .input{
+    display: flex;
+    flex-direction: column;    
+}
+
+.custom-label-area{
+    order: 1;
+}
+
+#client-phone1{
+    order: 2;
+}
+
+.custom-label-telefono{
+    order: 3;
+}
+
+#client-phone3{
+    order: 4;
 }

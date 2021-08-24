@@ -40,6 +40,23 @@ export function loadTargets() {
 
   breadcrumb.style.display = null;
   headerCart.style.display = null;
+    
+
+  var argTelSection = document.getElementsByClassName('argentina-phone')[0];  
+  if(argTelSection){
+    var secInput = argTelSection.getElementsByClassName('input')[0];    
+    var labelArea = document.getElementsByClassName('custom-label-area')[0]; 
+    var labelTel = document.getElementsByClassName('custom-label-telefono')[0]; 
+    if(labelArea){
+      secInput.removeChild(labelArea);    
+    }
+  
+    if(labelTel){
+      secInput.removeChild(labelTel);
+    }
+  }
+
+  
   switch (location.hash) {
     case "#/email":
       deleteSections();
@@ -50,6 +67,7 @@ export function loadTargets() {
       if (footer) footer.style.display = "flex";
       break;
     case "#/profile":
+<<<<<<< HEAD
       //Para modificar el input del móvil:
       var inputArea = document.getElementById("client-phone1");
       var inputTel = document.getElementById("client-phone3");
@@ -74,13 +92,85 @@ export function loadTargets() {
 
           console.log("tel: ", tel);
           console.log("tels: ", tels);
+=======
+      console.log("desde profile");                     
+        //Para modificar el input del móvil:            
+        var inputArea = document.getElementById('client-phone1');
+        var inputTel = document.getElementById('client-phone3');
+        var arealabel = document.createElement("Label");
+        arealabel.setAttribute("class","custom-label-area");
+        arealabel.innerHTML = "Código de área";
+        var tellabel = document.createElement("Label");
+        tellabel.setAttribute("class","custom-label-telefono");
+        tellabel.innerHTML = "No. teléfono";
+        var section = document.getElementsByClassName('argentina-phone')[0];
+        if(section){
+            var inputSection = section.getElementsByClassName('input')[0]
+            inputSection.appendChild(arealabel);
+            inputSection.appendChild(tellabel);
+        }
+
+        //Para modificar el input del móvil:    
+        /*        
+        var currentArea = inputArea ? inputArea.value : "";
+        var currentTel = inputTel ? inputTel.value : "";
+        var input = document.createElement("input");
+        input.type = "text";                
+        input.className = `custom-tel-input input-mini`;
+        input.value = currentArea + " " + currentTel;
+
+        var isOk = vtex.phone.validate(input.value);
+        if(isOk){
+            input.classList.remove('error');
+            input.classList.add('success');
+        }else{
+            input.classList.remove('success');
+            input.classList.add('error');
+        }
+        
+        console.log("Current tel: ", currentTel);
+        input.onchange = function (e) {                        
+            var tel = e.target.value;
+            isOk = vtex.phone.validate(tel);
+            if(isOk){
+                input.classList.remove('error');
+                input.classList.add('success');
+            }else{
+                input.classList.remove('success');
+                input.classList.add('error');
+            }
+
+            if(tel == ""){
+                inputArea.value = "";
+                inputTel.value = "";
+            }else{
+                var tels = tel.split(" ");
+                if(tels.length>1){                    
+                    inputArea.value = tels[0];
+                    inputTel.value = tels[1];
+                }else{
+                    inputArea.value = tels[0];
+                }
+
+                console.log("tel: ", tel);
+                console.log("tels: ", tels);
+            }
+>>>>>>> 025b7d7f8c6697eacc16a2e30a19523cd1c1d58a
         }
       };
 
+<<<<<<< HEAD
       var section = document.getElementsByClassName("argentina-phone")[0];
       console.log("SECTION: ", section);
       section.appendChild(input);
       //...
+=======
+        var section = document.getElementsByClassName('argentina-phone')[0];           
+        section.appendChild(input);
+        */
+        //...
+        
+>>>>>>> 025b7d7f8c6697eacc16a2e30a19523cd1c1d58a
 
       deleteEmail();
       showSections();
