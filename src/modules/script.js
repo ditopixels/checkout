@@ -30,6 +30,19 @@ export function loadTargets() {
 
   breadcrumb.style.display = null;
   headerCart.style.display = null;
+    
+  
+  var telSection = document.getElementsByClassName('argentina-phone')[0].getElementsByClassName('input')[0];
+  var labelArea = document.getElementsByClassName('custom-label-area')[0]; 
+  var labelTel = document.getElementsByClassName('custom-label-telefono')[0]; 
+  if(labelArea){
+    telSection.removeChild(labelArea);    
+  }
+
+  if(labelTel){
+    telSection.removeChild(labelTel);
+  }
+  
   switch (location.hash) {
     case "#/email":
       console.log("desde email");
@@ -41,16 +54,48 @@ export function loadTargets() {
       if (footer) footer.style.display = "flex";
       break;
     case "#/profile":
-      console.log("desde profile");
-        //Para modificar el input del móvil:            
+      console.log("desde profile");                     
         var inputArea = document.getElementById('client-phone1');
         var inputTel = document.getElementById('client-phone3');
+        var arealabel = document.createElement("Label");
+        arealabel.setAttribute("class","custom-label-area");
+        arealabel.innerHTML = "Código de área";
+        var tellabel = document.createElement("Label");
+        tellabel.setAttribute("class","custom-label-telefono");
+        tellabel.innerHTML = "No. teléfono";
+        var section = document.getElementsByClassName('argentina-phone')[0].getElementsByClassName('input')[0];
+        section.appendChild(arealabel);
+        section.appendChild(tellabel);
+
+        //Para modificar el input del móvil:    
+        /*        
+        var currentArea = inputArea ? inputArea.value : "";
+        var currentTel = inputTel ? inputTel.value : "";
         var input = document.createElement("input");
-        input.type = "text";
-        input.className = "custom-tel-input input-mini success";
-        input.value = inputArea.value || "" + " " + inputTel.value || "";
-        input.onkeypress = function (e) {
+        input.type = "text";                
+        input.className = `custom-tel-input input-mini`;
+        input.value = currentArea + " " + currentTel;
+
+        var isOk = vtex.phone.validate(input.value);
+        if(isOk){
+            input.classList.remove('error');
+            input.classList.add('success');
+        }else{
+            input.classList.remove('success');
+            input.classList.add('error');
+        }
+        
+        console.log("Current tel: ", currentTel);
+        input.onchange = function (e) {                        
             var tel = e.target.value;
+            isOk = vtex.phone.validate(tel);
+            if(isOk){
+                input.classList.remove('error');
+                input.classList.add('success');
+            }else{
+                input.classList.remove('success');
+                input.classList.add('error');
+            }
 
             if(tel == ""){
                 inputArea.value = "";
@@ -69,9 +114,9 @@ export function loadTargets() {
             }
         }
 
-        var section = document.getElementsByClassName('argentina-phone')[0];
-        console.log("SECTION: ", section);        
+        var section = document.getElementsByClassName('argentina-phone')[0];           
         section.appendChild(input);
+        */
         //...
         
 
