@@ -6,9 +6,10 @@
 @import "general.scss";
 @import "cards";
 @import "breadcrumb";
-@import "_main.scss";
+@import "main.scss";
 @import "CartHeader";
-@import "_mobileCustom";
+@import "mobileCustom";
+
 a {
   color: $darkGray !important;
   text-decoration: none;
@@ -132,7 +133,7 @@ body {
     }
   }
 }
-.body.body-cart .cart-template {
+.cart-template.full-cart.span12.active {
   .summary-template-holder {
     box-shadow: -7px 0 5px -5px #0000004a;
   }
@@ -396,10 +397,6 @@ body {
   display: none !important;
 }
 
-.body-cart-vertical .cart-template-holder {
-  width: 70% !important;
-}
-
 .coupon-fields {
   span {
     display: grid !important;
@@ -418,10 +415,6 @@ body {
   .info {
     display: none !important;
   }
-}
-
-.summary-template-holder tbody {
-  border: 0 !important;
 }
 
 .table {
@@ -662,4 +655,11 @@ elemento {
 }
 .transactions-container.row-fluid {
   display: none;
+}
+.table.cart-items {
+  thead {
+    > tr {
+      border-bottom: 3px solid #a0a0a0;
+    }
+  }
 }
