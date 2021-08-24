@@ -8,7 +8,7 @@
 @import "breadcrumb";
 @import "_main.scss";
 @import "CartHeader";
-
+@import "_mobileCustom";
 a {
   color: $darkGray !important;
   text-decoration: none;
@@ -399,7 +399,7 @@ body {
 .coupon-fields {
   span {
     display: grid !important;
-    grid-template-columns: 20em 1fr;
+    grid-template-columns: 2fr 1fr;
     padding-inline-start: 0em;
     grid-column-gap: 2em;
     input {
@@ -437,8 +437,8 @@ body {
 
 .quantity {
   order: 2 !important;
-  margin-right: 8em !important;
-  margin-left: 8em !important;
+  margin-right: 12em !important;
+  margin-left: 4.3em !important;
 }
 .quantity-price {
   order: 3 !important;
@@ -572,12 +572,14 @@ body {
 
 .product-price {
   order: 2 !important;
-  margin-left: 2em !important;
+  margin-left: 1em !important;
   .best-price {
     display: grid;
     margin-left: 3px;
+    font-size: 15px;
     .new-product-real-price {
-      display: grid !important;
+      display: none !important;
+      //display: grid !important;
       color: gray;
       text-decoration: line-through;
     }
