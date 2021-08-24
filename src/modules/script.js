@@ -42,6 +42,39 @@ export function loadTargets() {
       break;
     case "#/profile":
       console.log("desde profile");
+        //Para modificar el input del móvil:            
+        var inputArea = document.getElementById('client-phone1');
+        var inputTel = document.getElementById('client-phone3');
+        var input = document.createElement("input");
+        input.type = "text";
+        input.className = "custom-tel-input input-mini success";
+        input.value = inputArea.value || "" + " " + inputTel.value || "";
+        input.onkeypress = function (e) {
+            var tel = e.target.value;
+
+            if(tel == ""){
+                inputArea.value = "";
+                inputTel.value = "";
+            }else{
+                var tels = tel.split(" ");
+                if(tels.length>1){                    
+                    inputArea.value = tels[0];
+                    inputTel.value = tels[1];
+                }else{
+                    inputArea.value = tels[0];
+                }
+
+                console.log("tel: ", tel);
+                console.log("tels: ", tels);
+            }
+        }
+
+        var section = document.getElementsByClassName('argentina-phone')[0];
+        console.log("SECTION: ", section);        
+        section.appendChild(input);
+        //...
+        
+
       deleteEmail();
       showSections();
       if (footer) footer.style.display = null;

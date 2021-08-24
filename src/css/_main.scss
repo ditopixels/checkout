@@ -141,6 +141,41 @@
     margin-top: 2px;
 }
 
+.payment-group-item:hover span{    
+    color: #008CBE !important;    
+}
+
+.payment-group-item:hover span::before{
+    position: absolute !important;
+    display: block !important;
+    right: 15px  !important;
+    content: "" !important;
+    color: #008CBE !important;
+    font-size: 15px !important;
+    background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg) !important;
+    width: 10px !important;
+    height: 10px !important;
+    background-size: 10px 10px !important;
+    margin-top: 2px !important
+}
+
+/* Del header cart */
+.header-cart .back::before {
+    content: "";
+    background-image: url(https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg);
+    width: 12px;
+    height: 12px;
+    background-size: 12px 12px;    
+    position: absolute;
+    transform: rotate(-180deg);
+    margin-left: -20px;
+}
+
+.header-cart span.back{
+    display: flex;
+    align-items: center;
+}
+
 /* del paso del email */
 .client-pre-email-h span{
     white-space: nowrap;
@@ -155,6 +190,30 @@
     font-size: 14px;
 }
 
+.emailInfo{
+    background: #F9F9F9 !important;
+}
+
+.emailInfo .icon-ok:before {
+    content: "";
+    background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/check.svg) !important;
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 5px !important;
+}
+
+.emailInfo .unstyled{
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.emailInfo .unstyled li{
+    align-items: center;
+    display: flex;
+    margin: 0 auto;    
+}
+
 /* Del teléfono en datos personales */
 .client-phone-mobile{
     display: none;
@@ -162,4 +221,18 @@
 
 .client-phone-prefix, .client-phone-suffix{
     display: none;
+}
+
+.client-phone.argentina-phone{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.client-phone.argentina-phone label{
+    margin-top: 15px;
+    order: 4;
+}
+
+#client-phone1, #client-phone3{
+    visibility: hidden;
 }
