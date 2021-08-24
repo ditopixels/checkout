@@ -1,10 +1,14 @@
-.orderform-template .cart-template.mini-cart .summary-template-holder .summary>.summary-coupon-wrap{
-    display: none !important;
+.orderform-template
+  .cart-template.mini-cart
+  .summary-template-holder
+  .summary
+  > .summary-coupon-wrap {
+  display: none !important;
 }
 
 /* Para que no haya un salto en volver al carrito */
 .orderform-template .cart-template.mini-cart #go-to-cart-button a {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* Para que se muestre el precio de entrega */
@@ -16,223 +20,332 @@
 
 /* De los bordes del resumen del total */
 .orderform-template .cart-template.mini-cart .summary-totalizers tbody {
-    border-top: none !important;
+  border-top: none !important;
 }
 
 .summary-template-holder tbody {
-    border-top: none !important;
+  border-top: none !important;
+  border: none !important;
 }
 
 /* De la cantidad */
-.mini-cart.cart-template .cart-fixed .custom-cart-template-wrap .cart .quantity.badge {
-    top: 0px !important;    
+.mini-cart.cart-template
+  .cart-fixed
+  .custom-cart-template-wrap
+  .cart
+  .quantity.badge {
+  top: 0px !important;  
 }
 
-.mini-cart .quantity{
-    position: relative;
-    top: 0px;
-    left: 0px;
-    box-shadow: none;
-    color: #5D5D5D;
-}
-
-.orderform-template .cart-template.mini-cart .quantity{
-    color: #5D5D5D !important;
-}
-
-.summary-cart-template-holder .product-name{
-    font-weight: normal !important;
-}
-
-.summary-cart-template-holder .quantity::before{
-    content: 'Cantidad:';
-    color: #5D5D5D;
-    display: inline-block;
-    margin-right: 5px;
+.mini-cart .quantity {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  box-shadow: none;
+  color: #5d5d5d;  
 }
 
 .orderform-template .cart-template.mini-cart .quantity {
-    background: transparent;
-    color: black;
+  color: #5d5d5d !important;
+  margin-left: 0px !important;
 }
 
-.badge {    
-    font-weight: normal;        
-    background-color: white;
-    padding: 0px;
-    border: none !important;
+.summary-cart-template-holder .product-name {
+  font-weight: normal !important;
+}
+
+.summary-cart-template-holder .quantity::before {
+  content: "Cantidad:";
+  color: #5d5d5d;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.orderform-template .cart-template.mini-cart .quantity {
+  background: transparent;
+  color: black;
+}
+
+.badge {
+  font-weight: normal;
+  background-color: white;
+  padding: 0px;
+  border: none !important;
 }
 
 /* De la imagen */
-.cart-items img{
-    width: 60px;
-    height: 70px;    
+.cart-items img {
+  width: 60px;
+  height: 70px;
 }
 
 /* Shipping date */
-.shipping-date{
-    display: none !important;
+.shipping-date {
+  display: none !important;
 }
 
 /* Total price */
 .mini-cart .description {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 /* Para reorganizar los cuadros de pasos en la opción de payment */
-.orderform-template-holder.payment{  
-    .container-main>.checkout-container>.orderform-template>.orderform-template-holder>div.row-fluid {
-        height: calc(100vh - 77px - 15px) !important;
+.orderform-template-holder.payment {
+  .container-main
+    > .checkout-container
+    > .orderform-template
+    > .orderform-template-holder
+    > div.row-fluid {
+    height: calc(100vh - 77px - 15px) !important;
+  }
+
+  .row-fluid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+  }
+
+  #payment-data {
+    grid-column: span 2;
+    width: 101% !important;
+  }
+
+  @media screen and (min-width: 770px) {
+    #client-profile-data {
+      width: 100% !important;
     }
 
-    .row-fluid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content min-content;                
+    div#shipping-data.shipping-data {
+      width: 100% !important;
     }
-
-    #payment-data{
-        grid-column: span 2;
-        width: 101% !important;
-    }    
-
-    @media screen and (min-width: 770px){
-        #client-profile-data {
-            width:100% !important;
-        }
-    
-        div#shipping-data.shipping-data {
-            width:100% !important;
-        }
-    }
+  }
 }
 
 /* Del breadcrum */
 .breadcrumb {
-    padding: 13px 15px;
+  padding: 13px 15px;
 }
 
 /* De las opciones de pago en el cuadro payment */
 .required.payment-group-list-btn .payment-group-item span::before {
-    position: absolute;
-    display: block;
-    right: 15px;
-    content: "";
-    color: #9B9B9B;
-    font-size: 15px;
-    background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowGray.svg);
-    width: 10px;
-    height: 10px;
-    background-size: 10px 10px;
-    margin-top: 2px;
+  position: absolute;
+  display: block;
+  right: 15px;
+  content: "";
+  color: #9b9b9b;
+  font-size: 15px;
+  background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowGray.svg);
+  width: 10px;
+  height: 10px;
+  background-size: 10px 10px;
+  margin-top: 2px;
 }
 
 .required.payment-group-list-btn .payment-group-item.active span::before {
-    position: absolute;
-    display: block;
-    right: 15px;
-    content: "";
-    color: #9B9B9B;
-    font-size: 15px;
-    background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg);
-    width: 10px;
-    height: 10px;
-    background-size: 10px 10px;
-    margin-top: 2px;
+  position: absolute;
+  display: block;
+  right: 15px;
+  content: "";
+  color: #9b9b9b;
+  font-size: 15px;
+  background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg);
+  width: 10px;
+  height: 10px;
+  background-size: 10px 10px;
+  margin-top: 2px;
 }
 
-.payment-group-item:hover span{    
-    color: #008CBE !important;    
+.payment-group-item:hover span {
+  color: #008cbe !important;
 }
 
-.payment-group-item:hover span::before{
-    position: absolute !important;
-    display: block !important;
-    right: 15px  !important;
-    content: "" !important;
-    color: #008CBE !important;
-    font-size: 15px !important;
-    background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg) !important;
-    width: 10px !important;
-    height: 10px !important;
-    background-size: 10px 10px !important;
-    margin-top: 2px !important
+.payment-group-item:hover span::before {
+  position: absolute !important;
+  display: block !important;
+  right: 15px !important;
+  content: "" !important;
+  color: #008cbe !important;
+  font-size: 15px !important;
+  background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg) !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-size: 10px 10px !important;
+  margin-top: 2px !important;
 }
 
 /* Del header cart */
 .header-cart .back::before {
-    content: "";
-    background-image: url(https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg);
-    width: 12px;
-    height: 12px;
-    background-size: 12px 12px;    
-    position: absolute;
-    transform: rotate(-180deg);
-    margin-left: -20px;
+  content: "";
+  background-image: url(https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg);
+  width: 12px;
+  height: 12px;
+  background-size: 12px 12px;
+  position: absolute;
+  transform: rotate(-180deg);
+  margin-left: -20px;
 }
 
-.header-cart span.back{
-    display: flex;
-    align-items: center;
+.header-cart span.back {
+  display: flex;
+  align-items: center;
 }
 
 /* del paso del email */
-.client-pre-email-h span{
-    white-space: nowrap;
+.client-pre-email-h span {
+  white-space: nowrap;
 }
 
-#btn-client-pre-email{
-    text-transform: uppercase;
-    font-weight: bold;
+#btn-client-pre-email {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .client-pre-email .btn-success {
-    font-size: 14px;
+  font-size: 14px;
 }
 
-.emailInfo{
-    background: #F9F9F9 !important;
+.emailInfo {
+  background: #f9f9f9 !important;
 }
 
 .emailInfo .icon-ok:before {
-    content: "";
-    background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/check.svg) !important;
-    width: 15px !important;
-    height: 15px !important;
-    margin-right: 5px !important;
+  content: "";
+  background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/check.svg) !important;
+  width: 15px !important;
+  height: 15px !important;
+  margin-right: 5px !important;
 }
 
-.emailInfo .unstyled{
-    display: flex !important;
-    justify-content: center;
-    flex-direction: column;
+.emailInfo .unstyled {
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.emailInfo .unstyled li{
-    align-items: center;
-    display: flex;
-    margin: 0 auto;    
+.emailInfo .unstyled li {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
 }
 
 /* Del teléfono en datos personales */
-.client-phone-mobile{
-    display: none;
+.client-phone-mobile {
+  display: none;
 }
 
-.client-phone-prefix, .client-phone-suffix{
-    display: none;
+.client-phone-prefix,
+.client-phone-suffix {
+  display: none;
 }
 
-.client-phone.argentina-phone{
-    display: flex;
-    flex-direction: column-reverse;
-}
+/* Del modal */
 
-.client-phone.argentina-phone label{
-    margin-top: 15px;
-    order: 4;
-}
-
-#client-phone1, #client-phone3{
+.modal.modal-payment-template{
+    padding-top:20px;
+    padding-bottom:20px;
+    background: #fff;
+ }
+ 
+ .payment-confirmation-modal-body.default-modal{
+    color: #262626; 
+ }
+ 
+ .payment-confirmation-modal-body .payment-confirmation-content {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+  .payment-confirmation-thanks {
     visibility: hidden;
+ }
+
+ .default-modal{
+     color: #262626 !important;
+ }
+ 
+.modal-body {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.default-modal-security.payment-confirmation-security{
+    position: relative !important;    
+    display: flex !important;
+    margin: 0 auto !important;
+    width: 45px !important;
+    background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/logo-cart.png) !important;
+    background-size: 45px 45px !important;
+    content: ' ' !important;
+    height: 45px !important;
+}
+
+ .payment-confirmation-thanks::after{
+    visibility: visible;
+    content:'¡Muchas gracias por tu compra!';
+    font-family: Barlow !important;
+    display: block;
+    position: relative;
+    margin-top: -30px;
+ }
+
+.payment-confirmation-loading{
+     display: none !important;
+}
+
+.payment-confirmation-message{
+    visibility: hidden;
+}
+
+.payment-confirmation-message::after{
+    font-size: 16px !important;
+    font-family: Barlow !important;
+    visibility: visible;    
+    content:'Estamos procesando tu pedido...';
+    display: block;
+    position: relative;
+    margin-top: -30px;    
+}
+
+/* De los input del teléfono */
+#client-phone1::before{
+    font-size: 16px !important;
+    font-family: Barlow !important;    
+    content:'Código de área';
+    display: block;
+    position: relative;    
+}
+
+#client-phone3::before{
+    font-size: 16px !important;
+    font-family: Barlow !important;
+    content:'No. teléfono';
+    display: block;
+    position: relative;           
+}
+
+.argentina-phone{
+   margin-top: 15px;
+}
+
+.argentina-phone .input{
+    display: flex;
+    flex-direction: column;    
+}
+
+.custom-label-area{
+    order: 1;
+}
+
+#client-phone1{
+    order: 2;
+}
+
+.custom-label-telefono{
+    order: 3;
+}
+
+#client-phone3{
+    order: 4;
 }
