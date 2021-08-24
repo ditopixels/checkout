@@ -418,30 +418,50 @@ body {
 }
 
 .quantity {
-  order: 1;
-  margin-right: 65px;
-}
-.product-price {
-  order: 0;
+  order: 2 !important;
   margin-right: 8em;
+  margin-left: 8em;
 }
+.quantity-price {
+  order: 3 !important;
+  display: grid !important;
+}
+.shipping-date {
+  display: none !important;
+}
+
 .item-remove {
-  order: 5;
+  order: 5 !important;
 }
 .table.cart-items thead tr th.product {
-  width: calc(87% - 352px) !important;
+  width: calc(37%) !important;
 }
+
+.table.cart-items tbody tr td.product-name {
+  order: 2 !important;
+  width: 23% !important;
+}
+
 .product-price {
-  order: 2;
-  margin-left: 19px;
+  order: 2 !important;
+  margin-left: 2em !important;
+  .best-price {
+    display: grid;
+    margin-left: 3px;
+    .new-product-real-price {
+      display: grid !important;
+      color: gray;
+      text-decoration: line-through;
+    }
+    .new-product-real-price-per-unit {
+      display: none !important;
+    }
+  }
 }
 
 .v-custom-product-item-wrap {
   .quantity {
     margin-left: 63px;
-    input {
-      display: none;
-    }
     .item-unit-label {
       order: 1;
       margin: 0px 4px;
@@ -465,4 +485,15 @@ body {
   .item-remove {
     padding-block-start: 31px;
   }
+}
+
+.table.cart-items td.quantity input {
+  display: none !important;
+}
+.table.cart-items tbody tr td.quantity-price {
+  display: block !important;
+  margin-left: 5em;
+}
+.new-product-real-price-per-unit {
+  display: none;
 }
