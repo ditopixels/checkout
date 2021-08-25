@@ -23,6 +23,7 @@
       grid-column: 1/2;
     }
     .product-price {
+      display: none !important;
       grid-row: 10;
       grid-column: 4;
       .new-product-price {
