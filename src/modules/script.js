@@ -68,7 +68,7 @@ export function loadTargets() {
     case "#/profile":
       console.log("desde profile");                     
         //Para modificar el input del móvil:            
-        var inputArea = document.getElementById('client-phone1');
+        /*var inputArea = document.getElementById('client-phone1');
         var inputTel = document.getElementById('client-phone3');
         var arealabel = document.createElement("Label");
         arealabel.setAttribute("class","custom-label-area");
@@ -81,7 +81,7 @@ export function loadTargets() {
             var inputSection = section.getElementsByClassName('input')[0]
             inputSection.appendChild(arealabel);
             inputSection.appendChild(tellabel);
-        }
+        }*/
 
         
         //Para modificar el input del móvil:    
