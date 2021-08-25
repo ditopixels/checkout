@@ -28,6 +28,8 @@ body {
   margin-top: 20px;
   background: #018dbb !important;
   border: none !important;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .shp-lean-option {
@@ -152,6 +154,8 @@ body.body-cart .cart-template {
   margin-top: 20px;
   background: #018dbb !important;
   border: none !important;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .shp-lean-option {
   background: #f2f2f2 !important;
@@ -230,7 +234,7 @@ body.body-cart .cart-template {
 
 .shipping-data .accordion-toggle::before {
   content: "";
-  /*background: url('https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/54cf916b-026c-4953-bcb4-41cb72771bc3___ec90a519aca4b963272286e360ab44e5.svg') !important;*/
+  visibility: visible;
   background: url("https://ray2--sanisidrolonasar.myvtex.com/arquivos/icnTruckGray.svg") !important;
   background-size: 40px 40px !important;
   width: 40px;
@@ -242,6 +246,18 @@ body.body-cart .cart-template {
   color: none;
 }
 
+//agregado
+.shipping-data .accordion-toggle{
+  visibility: hidden;
+}
+
+.shipping-data .accordion-toggle::after {
+  content: 'Método de Entrega';
+  visibility: visible;
+  position: relative;
+  margin-left: -5ch;
+}
+//agregado...
 .monetary {
   color: #000 !important;
   font-size: 17px !important;
