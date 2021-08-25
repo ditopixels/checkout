@@ -22,8 +22,8 @@ export function setGeneral() {
   let x = document.querySelector(".accordion-toggle > span");
 }
 
+let count = false;
 export function loadTargets() {
-  let count = 0;
   setGeneral();
   const headerCart = d.querySelector("a.header-cart");
   const breadcrumb = d.querySelector("div.breadcrumb");
@@ -33,9 +33,9 @@ export function loadTargets() {
   backToStore.href = "/";
   backToStore.classList.add("back-to-store");
   backToStore.textContent = "ELEGIR MÁS PRODUCTOS";
-  if (containerBuyBtn && count != 0) {
+  if (containerBuyBtn && !count) {
     containerBuyBtn.appendChild(backToStore);
-    count = count + 1;
+    count = true;
   }
 
   breadcrumb.style.display = null;
