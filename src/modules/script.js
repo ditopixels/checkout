@@ -148,10 +148,18 @@ export function loadTargets() {
       document.body.classList.remove("blanco");
       break;
     case "#/shipping":
+      //Para cambiar el texto del botón que agrega una nueva dirección.
+      var buttonDirections = document.getElementById('change-pickup-button');
+      buttonDirections.firstChild.data = 'Agregar una nueva dirección';
+      
+      //Para cambiar el texto del botón que lleva al pago.
+      var buttonGoPayment = document.getElementById('btn-go-to-payment');
+      buttonGoPayment.firstChild.data = 'Ir para el pago';
+
       if (footer) footer.style.display = null;
       document.body.classList.remove("blanco");
       deleteEmail();
-      showSections();
+      showSections();      
       break;
     case "#/payment":
       if (footer) footer.style.display = null;
