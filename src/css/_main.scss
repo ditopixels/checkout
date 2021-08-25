@@ -349,3 +349,80 @@
 #client-phone3{
     order: 4;
 }
+
+/* De las opciones de entrega */
+.shipping-method-wrapper .shp-method-option-complement{
+	display:none;
+}
+
+#shipping-option-delivery .shp-method-option-text{
+  visibility: hidden;
+}
+
+#shipping-option-delivery .shp-method-option-text:after{
+  content: 'Envío a domicilio';
+  visibility: visible;
+  position: relative;
+  margin-left: -6ch;
+  font-size: 15px;
+  font-family: Barlow;
+  font-weight: 300;  
+}
+
+#shipping-option-pickup-in-point .shp-method-option-text{
+  visibility: hidden;
+}
+
+#shipping-option-pickup-in-point .shp-method-option-text:after{
+  content: 'Retiro en tienda';
+  visibility: visible;
+  position: relative;
+  margin-left: -7ch;
+  font-size: 15px;
+  font-family: Barlow;
+  font-weight: 300;  
+}
+
+#shipping-option-delivery, #shipping-option-pickup-in-point{
+  padding: 17px 24px;
+}
+
+#change-pickup-button{
+  border: solid 2px #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#details-pickup-button{
+  padding: 0px !important;
+  text-decoration: underline;
+  border: none !important;  
+}
+
+.pickup-point-info{
+  position: relative;
+  background: rgba(242,242,242,0.5);
+}
+
+.pickup-marker-blue{
+  position: absolute !important;
+}
+
+.vtex-omnishipping-1-x-shippingSectionTitle{
+  visibility: hidden;
+}
+
+//Para ocultar los datos del que retirará el pedido
+.shp-pickup-receiver{
+  display: none !important;
+}
+
+.vtex-omnishipping-1-x-shippingSectionTitle:after{
+  content: 'Opciones de retiro';
+  visibility: visible;
+  position: relative;
+  margin-left: -14ch;
+  font-size: 15px;
+  font-family: Barlow;
+  font-weight: 300;  
+}
