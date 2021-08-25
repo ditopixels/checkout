@@ -54,8 +54,7 @@ export function loadTargets() {
     if(labelTel){
       secInput.removeChild(labelTel);
     }
-  }
-
+  }   
   
   switch (location.hash) {
     case "#/email":
@@ -84,6 +83,7 @@ export function loadTargets() {
             inputSection.appendChild(tellabel);
         }
 
+        
         //Para modificar el input del móvil:    
         /*        
         var currentArea = inputArea ? inputArea.value : "";
