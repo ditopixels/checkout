@@ -5,10 +5,12 @@ import {
   loadBackToCart,
   loadFooter,
   setHeader,
+  loadFonts,
 } from "./modules/script";
 
 window.addEventListener("load", () => {});
 document.addEventListener("DOMContentLoaded", () => {
+  loadFonts();
   setHeader();
   loadBreadCrumb();
   loadBackToCart();

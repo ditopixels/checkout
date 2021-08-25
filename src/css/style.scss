@@ -8,7 +8,6 @@
 @import "breadcrumb";
 @import "main.scss";
 @import "CartHeader";
-@import "mobileCustom";
 
 a {
   color: $darkGray !important;
@@ -582,11 +581,6 @@ body.body-cart .cart-template {
   width: calc(37%) !important;
 }
 
-.table.cart-items tbody tr td.product-name {
-  order: 2 !important;
-  width: 23% !important;
-}
-
 .product-price {
   order: 2 !important;
   margin-left: 1em !important;
@@ -643,9 +637,6 @@ body.body-cart .cart-template {
   .quantity-price {
     margin-left: 31px !important;
   }
-  .product-price {
-    margin-left: 31px !important;
-  }
   .item-remove {
     padding-block-start: 31px;
   }
@@ -662,14 +653,6 @@ elemento {
   display: grid !important;
 }
 
-.row-fluid.summary {
-  margin-top: 0em !important;
-  > div:nth-child(1) {
-    display: grid !important;
-    margin-bottom: 22em !important;
-  }
-}
-
 .cart-more-options {
   display: none !important;
 }
@@ -684,6 +667,7 @@ elemento {
   }
 }
 
-.cart .cart-items .quantity{
+.cart .cart-items .quantity {
   margin-left: 0px !important;
 }
+@import "mobileCustom";

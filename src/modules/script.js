@@ -1,4 +1,24 @@
 const d = document;
+export function loadFonts() {
+  const LinkStylesOne = d.createElement("link");
+  const LinkStylesTwo = d.createElement("link");
+  const LinkStylesThree = d.createElement("link");
+
+  LinkStylesOne.rel = "preconnect";
+  LinkStylesOne.href = "https://fonts.googleapis.com";
+
+  LinkStylesTwo.rel = "preconnect";
+  LinkStylesTwo.href = "https://fonts.gstatic.com";
+  LinkStylesTwo.setAttribute("crossorigin", null);
+
+  LinkStylesThree.rel = "stylesheet";
+  LinkStylesThree.href =
+    "https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap";
+
+  d.head.appendChild(LinkStylesOne);
+  d.head.appendChild(LinkStylesTwo);
+  d.head.appendChild(LinkStylesThree);
+}
 
 export function setHeader() {
   const panel = d.querySelector(".cart-template-holder");
@@ -40,22 +60,21 @@ export function loadTargets() {
 
   breadcrumb.style.display = null;
   headerCart.style.display = null;
-    
 
-  var argTelSection = document.getElementsByClassName('argentina-phone')[0];  
-  if(argTelSection){
-    var secInput = argTelSection.getElementsByClassName('input')[0];    
-    var labelArea = document.getElementsByClassName('custom-label-area')[0]; 
-    var labelTel = document.getElementsByClassName('custom-label-telefono')[0]; 
-    if(labelArea){
-      secInput.removeChild(labelArea);    
+  var argTelSection = document.getElementsByClassName("argentina-phone")[0];
+  if (argTelSection) {
+    var secInput = argTelSection.getElementsByClassName("input")[0];
+    var labelArea = document.getElementsByClassName("custom-label-area")[0];
+    var labelTel = document.getElementsByClassName("custom-label-telefono")[0];
+    if (labelArea) {
+      secInput.removeChild(labelArea);
     }
-  
-    if(labelTel){
+
+    if (labelTel) {
       secInput.removeChild(labelTel);
     }
-  }   
-  
+  }
+
   switch (location.hash) {
     case "#/email":
       deleteSections();
@@ -65,8 +84,7 @@ export function loadTargets() {
       breadcrumb.style.display = "none";
       if (footer) footer.style.display = "flex";
       break;
-    case "#/profile":
-      console.log("desde profile");                     
+    case "#/profile":                 
         //Para modificar el input del móvil:            
         /*var inputArea = document.getElementById('client-phone1');
         var inputTel = document.getElementById('client-phone3');
@@ -139,8 +157,7 @@ export function loadTargets() {
         var section = document.getElementsByClassName('argentina-phone')[0];           
         section.appendChild(input);
         */
-        //...
-        
+      //...
 
       deleteEmail();
       showSections();
@@ -149,17 +166,17 @@ export function loadTargets() {
       break;
     case "#/shipping":
       //Para cambiar el texto del botón que agrega una nueva dirección.
-      var buttonDirections = document.getElementById('change-pickup-button');
-      buttonDirections.firstChild.data = 'Agregar una nueva dirección';
-      
+      var buttonDirections = document.getElementById("change-pickup-button");
+      buttonDirections.firstChild.data = "Agregar una nueva dirección";
+
       //Para cambiar el texto del botón que lleva al pago.
-      var buttonGoPayment = document.getElementById('btn-go-to-payment');
-      buttonGoPayment.firstChild.data = 'Ir para el pago';
+      var buttonGoPayment = document.getElementById("btn-go-to-payment");
+      buttonGoPayment.firstChild.data = "Ir para el pago";
 
       if (footer) footer.style.display = null;
       document.body.classList.remove("blanco");
       deleteEmail();
-      showSections();      
+      showSections();
       break;
     case "#/payment":
       if (footer) footer.style.display = null;
