@@ -1,5 +1,5 @@
-@import "colores.scss";
 @import "fonts.scss";
+@import "colores.scss";
 @import "mixins.scss";
 @import "footer.scss";
 @import "header.scss";
@@ -387,7 +387,8 @@ body.body-cart .cart-template {
   justify-content: center;
   width: 120px;
   margin: 0 auto;
-  color: #000 !important;
+  font-size: 14px !important;
+  color: #262626 !important;
 }
 
 .orderform-template .cart-template.mini-cart #go-to-cart-button a::before {
@@ -398,7 +399,7 @@ body.body-cart .cart-template {
   background-size: 100%;
   position: absolute;
   transform: rotate(-180deg);
-  left: -20px;
+  left: -30px;
 }
 
 .custom-cart-template-wrap {
@@ -459,7 +460,9 @@ body.body-cart .cart-template {
 .shipping-date {
   display: none !important;
 }
-
+.total-selling-price{
+  font-size: 15px !important;
+}
 /* De los pasos del pago (Texto) */
 .accordion-toggle {
   color: #9b9b9b !important;
@@ -572,6 +575,7 @@ body.body-cart .cart-template {
 
 .item-remove {
   order: 5 !important;
+  padding-top: 5px !important;
 }
 .table.cart-items thead tr th.product {
   width: calc(37%) !important;

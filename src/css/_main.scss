@@ -34,7 +34,7 @@
   .custom-cart-template-wrap
   .cart
   .quantity.badge {
-  top: 0px !important;  
+    top: 0px !important;  
 }
 
 .mini-cart .quantity {
@@ -59,6 +59,7 @@
   color: #5d5d5d;
   display: inline-block;
   margin-right: 5px;
+  font-size: 12px !important;
 }
 
 .orderform-template .cart-template.mini-cart .quantity {
@@ -229,14 +230,14 @@
 }
 
 /* Del teléfono en datos personales */
-.client-phone-mobile {
+/*.client-phone-mobile {
   display: none;
 }
 
 .client-phone-prefix,
 .client-phone-suffix {
   display: none;
-}
+}*/
 
 /* Del modal */
 
@@ -350,6 +351,36 @@
     order: 4;
 }
 
+.client-phone-mobile{
+  position: absolute !important;
+  bottom: 100% !important;
+  margin-bottom: 5px !important;
+  right: 0 !important;
+}
+.client-phone{
+  margin-top: 10px !important;
+  >label{
+    margin-bottom: 5px !important;
+  }
+  >div{
+    position: relative;
+    >.input{
+      display: flex !important;
+      flex-direction: row !important;
+      column-gap: 8px;
+      #client-phone1{
+        width: 50px !important;
+      }
+      .client-phone-suffix{
+        display: none !important;
+      }
+      .client-phone-prefix{
+        display:flex !important;
+        align-items: center !important;
+      }
+    }
+  }
+}
 /* De las opciones de entrega */
 .shipping-method-wrapper .shp-method-option-complement{
 	display:none;

@@ -42,8 +42,8 @@ export function setGeneral() {
   let x = document.querySelector(".accordion-toggle > span");
 }
 
+let count = false;
 export function loadTargets() {
-  let count = 0;
   setGeneral();
   const headerCart = d.querySelector("a.header-cart");
   const breadcrumb = d.querySelector("div.breadcrumb");
@@ -53,9 +53,9 @@ export function loadTargets() {
   backToStore.href = "/";
   backToStore.classList.add("back-to-store");
   backToStore.textContent = "ELEGIR MÁS PRODUCTOS";
-  if (containerBuyBtn && count != 0) {
+  if (containerBuyBtn && !count) {
     containerBuyBtn.appendChild(backToStore);
-    count = count + 1;
+    count = true;
   }
 
   breadcrumb.style.display = null;
@@ -84,26 +84,26 @@ export function loadTargets() {
       breadcrumb.style.display = "none";
       if (footer) footer.style.display = "flex";
       break;
-    case "#/profile":
-      console.log("desde profile");
-      //Para modificar el input del móvil:
-      var inputArea = document.getElementById("client-phone1");
-      var inputTel = document.getElementById("client-phone3");
-      var arealabel = document.createElement("Label");
-      arealabel.setAttribute("class", "custom-label-area");
-      arealabel.innerHTML = "Código de área";
-      var tellabel = document.createElement("Label");
-      tellabel.setAttribute("class", "custom-label-telefono");
-      tellabel.innerHTML = "No. teléfono";
-      var section = document.getElementsByClassName("argentina-phone")[0];
-      if (section) {
-        var inputSection = section.getElementsByClassName("input")[0];
-        inputSection.appendChild(arealabel);
-        inputSection.appendChild(tellabel);
-      }
+    case "#/profile":                 
+        //Para modificar el input del móvil:            
+        /*var inputArea = document.getElementById('client-phone1');
+        var inputTel = document.getElementById('client-phone3');
+        var arealabel = document.createElement("Label");
+        arealabel.setAttribute("class","custom-label-area");
+        arealabel.innerHTML = "Código de área";
+        var tellabel = document.createElement("Label");
+        tellabel.setAttribute("class","custom-label-telefono");
+        tellabel.innerHTML = "No. teléfono";
+        var section = document.getElementsByClassName('argentina-phone')[0];
+        if(section){
+            var inputSection = section.getElementsByClassName('input')[0]
+            inputSection.appendChild(arealabel);
+            inputSection.appendChild(tellabel);
+        }*/
 
-      //Para modificar el input del móvil:
-      /*        
+        
+        //Para modificar el input del móvil:    
+        /*        
         var currentArea = inputArea ? inputArea.value : "";
         var currentTel = inputTel ? inputTel.value : "";
         var input = document.createElement("input");
