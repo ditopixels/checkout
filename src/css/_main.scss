@@ -112,6 +112,16 @@
   }
 
   @media screen and (min-width: 770px) {
+    .row-fluid {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      .payment-group{
+        max-width: unset !important;
+      }
+      .steps-view{
+        margin-left: 0 !important;
+      }
+    }
     #client-profile-data {
       width: 100% !important;
     }
@@ -121,7 +131,18 @@
     }
   }
 }
-
+@media screen and (min-width: 770px) {
+  .form-step.box-new.row-fluid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    .payment-group{
+      max-width: unset !important;
+    }
+    .steps-view{
+      margin-left: 0 !important;
+    }
+  }
+}
 /* Del breadcrum */
 .breadcrumb {
   padding: 13px 15px;
@@ -469,4 +490,13 @@ body .modal.modal-email-template{
   font-family: Barlow;
   font-weight: 300;  
   left: 0px;
+}
+
+@media screen and (max-width:770px){
+  .client-phone-mobile{
+    >label{
+      display: flex !important;
+      width: 40px !important;
+    }
+  }
 }

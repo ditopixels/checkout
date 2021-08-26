@@ -92,6 +92,7 @@ body{
       padding: 0 !important;
       height: calc(100vh - 77px - 15px - 30px - 46px - 40px + 25px);
       max-height: 850px;
+      z-index:9999;
       > h2 {
         padding: 24px 32px !important;
         border-color: $gray;
@@ -353,8 +354,17 @@ footer {
 .required.payment-group-list-btn {
   display: flex;
   flex-direction: column;
+  
   .payment-group-item {
     width: 100% !important;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .required.payment-group-list-btn {
+    column-gap: 8px !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3 - 8px), 1fr));
   }
 }
 
