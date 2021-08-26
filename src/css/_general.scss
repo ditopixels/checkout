@@ -39,6 +39,7 @@ a.back-to-store {
   margin-top: 10px;
   text-decoration: none;
   color: #000 !important;
+  font-weight: 700;
 }
 a.btn-place-order {
   padding-top: 12px !important;
@@ -58,7 +59,18 @@ body.body-cart {
 }
 .brand,
 .table.cart-items tbody tr td.product-name .seller {
-  display: none;
+  display: none !important;
+}
+body{
+  .table.cart-items tbody tr td.product-name{
+    width: calc(30% - 80px) !important;
+  }
+  .table.cart-items thead tr th.product{
+    width: 30% !important;
+  }
+  .table.cart-items tbody tr td.product-price, .table.cart-items thead tr th.product-price{
+    margin-right: 31px !important;
+  }
 }
 .vtex-cartman {
   display: none;
@@ -166,6 +178,8 @@ footer {
   color: $black !important;
   border: 1px solid $black !important;
   border-radius: 0 !important;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .input-block-level {

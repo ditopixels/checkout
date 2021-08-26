@@ -111,9 +111,12 @@ body {
   border: none;
   color: none !important;
 }
+#payment-data-submit{
+  text-transform: uppercase !important;
+}
 
 .monetary {
-  color: #000 !important;
+  color: #262626 !important;
   font-size: 17px !important;
 }
 
@@ -131,6 +134,8 @@ body {
     position: static;
     #cart-to-orderform {
       border-radius: 0 !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
     }
   }
 }
@@ -171,6 +176,15 @@ body.body-cart .cart-template {
 .accordion-toggle {
   color: #008cbe !important;
   font-weight: 500 !important;
+}
+.table.cart-items td.product-image img,.table.cart-items td.product-image {
+  width: 70px !important;
+}
+.product-item{
+  border-bottom: 2px solid #f2f2f2 !important;
+}
+.old-product-price{
+  font-size: 13px !important;
 }
 .client-profile-email {
   margin-bottom: 0 !important;
@@ -259,7 +273,7 @@ body.body-cart .cart-template {
 }
 //agregado...
 .monetary {
-  color: #000 !important;
+  color: #262626 !important;
   font-size: 17px !important;
 }
 .info {
@@ -419,7 +433,7 @@ body.body-cart .cart-template {
     display: grid !important;
     grid-template-columns: 2fr 1fr;
     padding-inline-start: 0em;
-    grid-column-gap: 2em;
+    grid-column-gap: 1em;
     input {
       border-radius: 0 !important;
     }
