@@ -18,6 +18,16 @@ body.v-custom-step-payment {
     grid-column: span 2;
   }
 }
+#go-to-payment,#go-to-shipping{
+  width: 100% !important;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#go-to-cart-button{
+  position: relative !important;
+  z-index: 9999 !important;
+}
 a.back-to-store {
   border: 1px solid #000;
   display: flex;
@@ -87,8 +97,9 @@ body.body-cart {
         padding-right: 24px !important;
         padding-bottom: 0px !important;
         .hproduct {
-          padding-top: 1rem !important;
-          padding-bottom: 1rem !important;
+          padding-top: 1.2rem !important;
+          padding-bottom: .8rem !important;
+          border-bottom: 1px solid #f2f2f2;
         }
         .quantity.badge {
           top: 12px !important;
@@ -303,12 +314,13 @@ footer {
   tbody {
     .info {
       text-transform: capitalize !important;
-      color: #696969 !important;
+      color: #262626 !important;
       font-size: 13px !important;
     }
     .monetary {
-      color: #696969 !important;
+      color: #262626 !important;
       font-size: 13px !important;
+      font-weight: 700;
     }
   }
   tfoot {
@@ -363,12 +375,12 @@ footer {
 }
 .fn.product-name {
   font-weight: 900;
-  color: #000;
+  color: #262626;
 }
 
 .mini-cart .description .price.pull-right {
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 700;
   color: #262626;
 }
 
@@ -413,8 +425,12 @@ footer {
 
 tbody.totalizers-list tr td {
   text-transform: capitalize !important;
-  font-size: 13px !important;
-  color: #666 !important;
+  color: #262626 !important;
+      font-size: 13px !important;
+}
+tbody.totalizers-list tr td.monetary {
+
+      font-weight: 700;
 }
 tbody.totalizers-list{
   display: flex !important;

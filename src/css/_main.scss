@@ -51,7 +51,7 @@
 }
 
 .summary-cart-template-holder .product-name {
-  font-weight: normal !important;
+  font-weight: 600 !important;
 }
 
 .summary-cart-template-holder .quantity::before {
@@ -451,9 +451,9 @@
 .vtex-omnishipping-1-x-shippingSectionTitle:after{
   content: 'Opciones de retiro';
   visibility: visible;
-  position: relative;
-  margin-left: -14ch;
+  position: absolute;
   font-size: 15px;
   font-family: Barlow;
   font-weight: 300;  
+  left: 0px;
 }

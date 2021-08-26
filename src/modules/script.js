@@ -167,11 +167,11 @@ export function loadTargets() {
     case "#/shipping":
       //Para cambiar el texto del botón que agrega una nueva dirección.
       var buttonDirections = document.getElementById("change-pickup-button");
-      buttonDirections.firstChild.data = "Agregar una nueva dirección";
+      if(buttonDirections)buttonDirections.firstChild.data = "Agregar una nueva dirección";
 
       //Para cambiar el texto del botón que lleva al pago.
       var buttonGoPayment = document.getElementById("btn-go-to-payment");
-      buttonGoPayment.firstChild.data = "Ir para el pago";
+      if(buttonGoPayment)buttonGoPayment.firstChild.data = "Ir para el pago";
 
       if (footer) footer.style.display = null;
       document.body.classList.remove("blanco");
