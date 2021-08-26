@@ -247,12 +247,12 @@ body.body-cart .cart-template {
 }
 
 //agregado
-.shipping-data .accordion-toggle{
+.shipping-data .accordion-toggle {
   visibility: hidden;
 }
 
 .shipping-data .accordion-toggle::after {
-  content: 'Método de Entrega';
+  content: "Método de Entrega";
   visibility: visible;
   position: relative;
   margin-left: -5ch;
@@ -667,7 +667,13 @@ elemento {
     }
   }
 }
-
+.seller {
+  display: none !important;
+}
+#cart-coupon-add {
+  font-weight: 500;
+  font-size: 15px;
+}
 .cart .cart-items .quantity {
   margin-left: 0px !important;
 }
