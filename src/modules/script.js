@@ -84,9 +84,9 @@ export function loadTargets() {
       breadcrumb.style.display = "none";
       if (footer) footer.style.display = "flex";
       break;
-    case "#/profile":                 
-        //Para modificar el input del móvil:            
-        /*var inputArea = document.getElementById('client-phone1');
+    case "#/profile":
+      //Para modificar el input del móvil:
+      /*var inputArea = document.getElementById('client-phone1');
         var inputTel = document.getElementById('client-phone3');
         var arealabel = document.createElement("Label");
         arealabel.setAttribute("class","custom-label-area");
@@ -101,9 +101,8 @@ export function loadTargets() {
             inputSection.appendChild(tellabel);
         }*/
 
-        
-        //Para modificar el input del móvil:    
-        /*        
+      //Para modificar el input del móvil:
+      /*        
         var currentArea = inputArea ? inputArea.value : "";
         var currentTel = inputTel ? inputTel.value : "";
         var input = document.createElement("input");
@@ -167,11 +166,12 @@ export function loadTargets() {
     case "#/shipping":
       //Para cambiar el texto del botón que agrega una nueva dirección.
       var buttonDirections = document.getElementById("change-pickup-button");
-      if(buttonDirections)buttonDirections.firstChild.data = "Agregar una nueva dirección";
+      if (buttonDirections)
+        buttonDirections.firstChild.data = "Agregar una nueva dirección";
 
       //Para cambiar el texto del botón que lleva al pago.
       var buttonGoPayment = document.getElementById("btn-go-to-payment");
-      if(buttonGoPayment)buttonGoPayment.firstChild.data = "Ir para el pago";
+      if (buttonGoPayment) buttonGoPayment.firstChild.data = "Ir para el pago";
 
       if (footer) footer.style.display = null;
       document.body.classList.remove("blanco");
