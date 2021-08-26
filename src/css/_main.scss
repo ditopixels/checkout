@@ -100,12 +100,6 @@
     height: calc(100vh - 77px - 15px) !important;
   }
 
-  .row-fluid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content;
-  }
-
   #payment-data {
     grid-column: span 2;
     width: 101% !important;
@@ -113,8 +107,9 @@
 
   @media screen and (min-width: 770px) {
     .row-fluid {
-      display: grid !important;
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content;
       .payment-group{
         max-width: unset !important;
       }
@@ -133,13 +128,13 @@
 }
 @media screen and (min-width: 770px) {
   .form-step.box-new.row-fluid {
-    display: grid !important;
-    grid-template-columns: 1fr;
+
     .payment-group{
       max-width: unset !important;
+      width: 40% !important;
     }
     .steps-view{
-      margin-left: 0 !important;
+      margin-left: 20px !important;
     }
   }
 }
@@ -213,9 +208,6 @@
 }
 
 /* del paso del email */
-.client-pre-email-h span {
-  white-space: nowrap;
-}
 
 #btn-client-pre-email {
   text-transform: uppercase;

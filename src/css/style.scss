@@ -360,6 +360,7 @@ body.body-cart .cart-template {
   border: none;
   background: transparent;
   color: none;
+  white-space: unset !important;
 }
 
 .ship-postalCode .input-small {
@@ -692,3 +693,19 @@ elemento {
   margin-left: 0px !important;
 }
 @import "mobileCustom";
+
+@media screen and (max-width:770px) {
+  #payment-data .box-step form.form-step{
+    flex-direction: column;
+    >.payment-group{
+      max-width: 100% !important;
+    }
+    >.steps-view{
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.orderform-template-holder #payment-data a.payment-group-item{
+  position: relative !important;
+}

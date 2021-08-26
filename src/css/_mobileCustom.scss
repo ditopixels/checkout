@@ -1,4 +1,11 @@
 @import "colores.scss";
+.summary-template-holder tfoot tr{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.summary-template-holder tfoot{
+  display: table-footer-group !important;
+}
 @media (max-width: 750px) {
   //*Headers
   .cartHeaderCustom {
@@ -16,7 +23,7 @@
     display: grid !important;
     grid-template-columns: repeat(8, 12.5%);
     grid-template-rows: repeat(11, 1em);
-    border-bottom: 2px solid #f2f2f2;
+    //border-bottom: 2px solid #f2f2f2;
 
     .product-image {
       grid-row: 8/10;
@@ -24,56 +31,65 @@
     }
     .product-price {
       grid-row: 10;
-      grid-column: 4;
+      grid-column: 7;
+      justify-self: self-end;
+      margin-top: .9em !important;
       .new-product-price {
         text-decoration: line-through;
         color: gray;
-        display: none !important;
+        display: none;
       }
     }
     .product-name {
       grid-column: 1/7;
       grid-row: 1/6;
-      width: 100% !important;
+      min-width: 100% !important;
       margin: 0 !important;
     }
     .quantity {
-      grid-column: 4;
+      grid-column: 5/-1;
       grid-row: 7/7;
       position: static;
+      justify-self: flex-end;
+      margin-right: 0 !important;
+      justify-content: flex-end !important;
       .item-unit-label {
         display: none;
       }
       .item-quantity-change-decrement {
-        min-width: 72%;
+        min-width: 45px;
         background-color: #f2f2f2;
       }
       .item-quantity-change-increment {
-        min-width: 72%;
+        min-width: 45px;
         background-color: black;
       }
     }
     .quantity-price {
       grid-row: 10;
-      grid-column: 4;
+      grid-column: 8/-1;
       position: static;
-      justify-self: left;
+      margin: 0 !important;
       .total-selling-price {
         font-size: 18px;
       }
-      span {
-        margin-left: 66px;
+      .total-selling-price{
+        justify-content: unset !important;
+        float: right !important;
       }
     }
     .item-remove {
       grid-row: 3;
-      grid-column: 4/4;
-      position: static !important;
+      grid-column: 8/-1;
+      justify-self: flex-end;
+      position: relative !important;
+      margin: 0 !important;
     }
   }
   .table.cart-items td.product-name,
   .table.cart-items td.quantity {
     margin-left: 0px !important;
+    width: 100% !important;
   }
   .v-custom-product-item-wrap.product-price {
     margin-left: 0px !important;

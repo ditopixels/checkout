@@ -18,13 +18,14 @@ body.v-custom-step-payment {
     grid-column: span 2;
   }
 }
-#go-to-payment,#go-to-shipping{
+#go-to-payment,
+#go-to-shipping {
   width: 100% !important;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
 }
-#go-to-cart-button{
+#go-to-cart-button {
   position: relative !important;
   z-index: 9999 !important;
 }
@@ -61,14 +62,15 @@ body.body-cart {
 .table.cart-items tbody tr td.product-name .seller {
   display: none !important;
 }
-body{
-  .table.cart-items tbody tr td.product-name{
+body {
+  .table.cart-items tbody tr td.product-name {
     width: calc(30% - 80px) !important;
   }
-  .table.cart-items thead tr th.product{
+  .table.cart-items thead tr th.product {
     width: 30% !important;
   }
-  .table.cart-items tbody tr td.product-price, .table.cart-items thead tr th.product-price{
+  .table.cart-items tbody tr td.product-price,
+  .table.cart-items thead tr th.product-price {
     margin-right: 31px !important;
   }
 }
@@ -111,7 +113,7 @@ body{
         padding-bottom: 0px !important;
         .hproduct {
           padding-top: 1.2rem !important;
-          padding-bottom: .8rem !important;
+          padding-bottom: 0.8rem !important;
           border-bottom: 1px solid #f2f2f2;
         }
         .quantity.badge {
@@ -450,13 +452,12 @@ footer {
 tbody.totalizers-list tr td {
   text-transform: capitalize !important;
   color: #262626 !important;
-      font-size: 13px !important;
+  font-size: 13px !important;
 }
 tbody.totalizers-list tr td.monetary {
-
-      font-weight: 700;
+  font-weight: 700;
 }
-tbody.totalizers-list{
+tbody.totalizers-list {
   display: flex !important;
   flex-direction: column;
   row-gap: 1rem;
@@ -468,14 +469,14 @@ tbody.totalizers-list{
   background-size: contain;
   background-position: center center;
 }
-.empty-cart-message p{
-  color: #5D5D5D;
+.empty-cart-message p {
+  color: #5d5d5d;
   max-width: 300px;
   display: flex;
   margin: 0 auto;
   font-size: 15px;
 }
-#cart-choose-products{
+#cart-choose-products {
   width: 280px;
     text-transform: uppercase;
     font-size: 15px;
