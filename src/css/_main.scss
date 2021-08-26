@@ -280,6 +280,7 @@
     background-size: 45px 45px !important;
     content: ' ' !important;
     height: 45px !important;
+    opacity:1 !important; 
 }
 
  .payment-confirmation-thanks::after{
@@ -397,9 +398,20 @@
   margin-left: -6ch;
   font-size: 15px;
   font-family: Barlow;
-  font-weight: 300;  
+  font-weight: 500;  
 }
-
+.item-unit-label{
+  display:none !important;
+}
+body .modal.modal-email-template{
+  background: #fff !important;
+}
+#btn-identified-user-button.identified-user-button{
+  background-color: #008cbe !important;
+      color: #fff !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
 #shipping-option-pickup-in-point .shp-method-option-text{
   visibility: hidden;
 }
@@ -411,7 +423,7 @@
   margin-left: -7ch;
   font-size: 15px;
   font-family: Barlow;
-  font-weight: 300;  
+  font-weight: 500;  
 }
 
 #shipping-option-delivery, #shipping-option-pickup-in-point{
