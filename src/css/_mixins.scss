@@ -1,33 +1,32 @@
+@import "colores";
 @mixin breakpoint($class) {
-    @if $class == xs {
-      @media (max-width: 767px) { @content; }
+  @if $class == xs {
+    @media (max-width: 767px) {
+      @content;
     }
-   
-    @else if $class == sm {
-      @media (min-width: 768px) { @content; }
+  } @else if $class == sm {
+    @media (min-width: 768px) {
+      @content;
     }
-   
-    @else if $class == md {
-      @media (min-width: 992px) { @content; }
+  } @else if $class == md {
+    @media (min-width: 992px) {
+      @content;
     }
-   
-    @else if $class == lg {
-      @media (min-width: 1200px) { @content; }
+  } @else if $class == lg {
+    @media (min-width: 1200px) {
+      @content;
     }
-   
-    @else {
-      @warn "Breakpoint mixin supports: xs, sm, md, lg";
-    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
 }
-@mixin transition{
-    transition: all .5s ease-in;
-    -webkit-transition: all .5s ease-in;
+@mixin transition {
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
 }
-@mixin flex{
+@mixin flex {
   display: flex;
   -webkit-display: flex;
   flex-flow: wrap;
   -webkit-flex-flow: wrap;
 }
-
-

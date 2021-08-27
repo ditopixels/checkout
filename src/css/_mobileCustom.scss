@@ -1,9 +1,9 @@
 @import "colores.scss";
-.summary-template-holder tfoot tr{
+.summary-template-holder tfoot tr {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
-.summary-template-holder tfoot{
+.summary-template-holder tfoot {
   display: table-footer-group !important;
 }
 @media (max-width: 750px) {
@@ -33,7 +33,7 @@
       grid-row: 10;
       grid-column: 7;
       justify-self: self-end;
-      margin-top: .9em !important;
+      margin-top: 0.9em !important;
       .new-product-price {
         text-decoration: line-through;
         color: gray;
@@ -57,12 +57,14 @@
         display: none;
       }
       .item-quantity-change-decrement {
+        border: 1px solid $black;
+        border-radius: 5px;
         min-width: 45px;
-        background-color: #f2f2f2;
       }
       .item-quantity-change-increment {
+        border: 1px solid $black;
+        border-radius: 5px;
         min-width: 45px;
-        background-color: black;
       }
     }
     .quantity-price {
@@ -73,7 +75,7 @@
       .total-selling-price {
         font-size: 18px;
       }
-      .total-selling-price{
+      .total-selling-price {
         justify-content: unset !important;
         float: right !important;
       }
@@ -152,5 +154,5 @@
 *Se dejo la barra custom
 */
 .header-cart {
-  display: none !important;
+  //display: none !important;
 }

@@ -1,11 +1,12 @@
+@import "colores.scss";
+
 .cartHeaderCustom {
   background-color: #fff;
   box-shadow: 0 7px 6px -5px #0000004a;
   display: grid;
   margin-bottom: 1em;
-  grid-template-columns: 4em 1fr;
+  grid-template-columns: 31px 1fr;
   grid-template-rows: 10px 1fr 10px;
-  padding-inline-start: 2.6em;
   img {
     max-width: 40px;
     grid-column: 1/1;

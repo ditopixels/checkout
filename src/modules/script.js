@@ -1,4 +1,6 @@
 const d = document;
+const HeaderCart = document.querySelector(".header-cart");
+
 export function loadFonts() {
   const LinkStylesOne = d.createElement("link");
   const LinkStylesTwo = d.createElement("link");
@@ -24,8 +26,9 @@ export function setHeader() {
   const panel = d.querySelector(".cart-template-holder");
   const selector = d.createElement("div");
   selector.innerHTML =
-    "<div class='cartHeaderCustom'> <img src='/arquivos/logo-cart.png'> <p>MI CARRITO</p> </div>";
+    "<div class='cartHeaderCustom'> <p>MI CARRITO</p> </div>";
   //selector.innerText = "Hellow";
+  //<img src='/arquivos/logo-cart.png'>
   panel.insertAdjacentElement("afterbegin", selector);
 }
 
@@ -83,6 +86,8 @@ export function loadTargets() {
       headerCart.style.display = "flex";
       breadcrumb.style.display = "none";
       if (footer) footer.style.display = "flex";
+      footer.style.margin = "0";
+      HeaderCart.classList.add("hidden");
       break;
     case "#/profile":
       //Para modificar el input del móvil:
@@ -185,9 +190,11 @@ export function loadTargets() {
       showSections();
       break;
     case "#/cart":
+      HeaderCart.classList.add("hidden");
       document.body.style.overflowY = "auto";
       document.body.classList.add("blanco");
       if (footer) footer.style.display = "flex";
+      footer.style.display = "flex";
       break;
   }
 }

@@ -1,3 +1,5 @@
+@import "colores";
+
 .orderform-template
   .cart-template.mini-cart
   .summary-template-holder
@@ -34,7 +36,7 @@
   .custom-cart-template-wrap
   .cart
   .quantity.badge {
-    top: 0px !important;  
+  top: 0px !important;
 }
 
 .mini-cart .quantity {
@@ -42,7 +44,7 @@
   top: 0px;
   left: 0px;
   box-shadow: none;
-  color: #5d5d5d;  
+  color: #5d5d5d;
 }
 
 .orderform-template .cart-template.mini-cart .quantity {
@@ -110,10 +112,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content min-content;
-      .payment-group{
+      .payment-group {
         max-width: unset !important;
       }
-      .steps-view{
+      .steps-view {
         margin-left: 0 !important;
       }
     }
@@ -128,12 +130,11 @@
 }
 @media screen and (min-width: 770px) {
   .form-step.box-new.row-fluid {
-
-    .payment-group{
+    .payment-group {
       max-width: unset !important;
       width: 40% !important;
     }
-    .steps-view{
+    .steps-view {
       margin-left: 20px !important;
     }
   }
@@ -173,7 +174,7 @@
 }
 
 .payment-group-item:hover span {
-  color: #008cbe !important;
+  color: $maroon-debarricas !important;
 }
 
 .payment-group-item:hover span::before {
@@ -181,7 +182,7 @@
   display: block !important;
   right: 15px !important;
   content: "" !important;
-  color: #008cbe !important;
+  color: $maroon-debarricas !important;
   font-size: 15px !important;
   background: url(https://sanisidrolonasar.myvtex.com/arquivos/rightArrowBlue.svg) !important;
   width: 10px !important;
@@ -219,12 +220,12 @@
 }
 
 .emailInfo {
-  background: #f9f9f9 !important;
+  background: $white !important;
 }
 
 .emailInfo .icon-ok:before {
   content: "";
-  background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/check.svg) !important;
+  background: url(https://debarricasar.vteximg.com.br/arquivos/check-debarricasar.svg) !important;
   width: 15px !important;
   height: 15px !important;
   margin-right: 5px !important;
@@ -254,239 +255,240 @@
 
 /* Del modal */
 
-.modal.modal-payment-template{
-    padding-top:20px;
-    padding-bottom:20px;
-    background: #fff;
- }
- 
- .payment-confirmation-modal-body.default-modal{
-    color: #262626; 
- }
- 
- .payment-confirmation-modal-body .payment-confirmation-content {
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
- 
-  .payment-confirmation-thanks {
-    visibility: hidden;
- }
-
- .default-modal{
-     color: #262626 !important;
- }
- 
-.modal-body {    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.modal.modal-payment-template {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #fff;
 }
 
-.default-modal-security.payment-confirmation-security{
-    position: relative !important;    
-    display: flex !important;
-    margin: 0 auto !important;
-    width: 45px !important;
-    background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/logo-cart.png) !important;
-    background-size: 45px 45px !important;
-    content: ' ' !important;
-    height: 45px !important;
-    opacity:1 !important; 
+.payment-confirmation-modal-body.default-modal {
+  color: #262626;
 }
 
- .payment-confirmation-thanks::after{
-    visibility: visible;
-    content:'¡Muchas gracias por tu compra!';
-    font-family: Barlow !important;
-    display: block;
-    position: relative;
-    margin-top: -30px;
- }
-
-.payment-confirmation-loading{
-     display: none !important;
+.payment-confirmation-modal-body .payment-confirmation-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.payment-confirmation-message{
-    visibility: hidden;
+.payment-confirmation-thanks {
+  visibility: hidden;
 }
 
-.payment-confirmation-message::after{
-    font-size: 16px !important;
-    font-family: Barlow !important;
-    visibility: visible;    
-    content:'Estamos procesando tu pedido...';
-    display: block;
-    position: relative;
-    margin-top: -30px;    
+.default-modal {
+  color: #262626 !important;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.default-modal-security.payment-confirmation-security {
+  position: relative !important;
+  display: flex !important;
+  margin: 0 auto !important;
+  width: 45px !important;
+  background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/logo-cart.png) !important;
+  background-size: 45px 45px !important;
+  content: " " !important;
+  height: 45px !important;
+  opacity: 1 !important;
+}
+
+.payment-confirmation-thanks::after {
+  visibility: visible;
+  content: "¡Muchas gracias por tu compra!";
+  font-family: Barlow !important;
+  display: block;
+  position: relative;
+  margin-top: -30px;
+}
+
+.payment-confirmation-loading {
+  display: none !important;
+}
+
+.payment-confirmation-message {
+  visibility: hidden;
+}
+
+.payment-confirmation-message::after {
+  font-size: 16px !important;
+  font-family: Barlow !important;
+  visibility: visible;
+  content: "Estamos procesando tu pedido...";
+  display: block;
+  position: relative;
+  margin-top: -30px;
 }
 
 /* De los input del teléfono */
-#client-phone1::before{
-    font-size: 16px !important;
-    font-family: Barlow !important;    
-    content:'Código de área';
-    display: block;
-    position: relative;    
+#client-phone1::before {
+  font-size: 16px !important;
+  font-family: Barlow !important;
+  content: "Código de área";
+  display: block;
+  position: relative;
 }
 
-#client-phone3::before{
-    font-size: 16px !important;
-    font-family: Barlow !important;
-    content:'No. teléfono';
-    display: block;
-    position: relative;           
+#client-phone3::before {
+  font-size: 16px !important;
+  font-family: Barlow !important;
+  content: "No. teléfono";
+  display: block;
+  position: relative;
 }
 
-.argentina-phone{
-   margin-top: 15px;
+.argentina-phone {
+  margin-top: 15px;
 }
 
-.argentina-phone .input{
-    display: flex;
-    flex-direction: column;    
+.argentina-phone .input {
+  display: flex;
+  flex-direction: column;
 }
 
-.custom-label-area{
-    order: 1;
+.custom-label-area {
+  order: 1;
 }
 
-#client-phone1{
-    order: 2;
+#client-phone1 {
+  order: 2;
 }
 
-.custom-label-telefono{
-    order: 3;
+.custom-label-telefono {
+  order: 3;
 }
 
-#client-phone3{
-    order: 4;
+#client-phone3 {
+  order: 4;
 }
 
-.client-phone-mobile{
+.client-phone-mobile {
   position: absolute !important;
   bottom: 100% !important;
   margin-bottom: 5px !important;
   right: 0 !important;
 }
-.client-phone{
+.client-phone {
   margin-top: 10px !important;
-  >label{
+  > label {
     margin-bottom: 5px !important;
   }
-  >div{
+  > div {
     position: relative;
-    >.input{
+    > .input {
       display: flex !important;
       flex-direction: row !important;
       column-gap: 8px;
-      #client-phone1{
+      #client-phone1 {
         width: 50px !important;
       }
-      .client-phone-suffix{
+      .client-phone-suffix {
         display: none !important;
       }
-      .client-phone-prefix{
-        display:flex !important;
+      .client-phone-prefix {
+        display: flex !important;
         align-items: center !important;
       }
     }
   }
 }
 /* De las opciones de entrega */
-.shipping-method-wrapper .shp-method-option-complement{
-	display:none;
+.shipping-method-wrapper .shp-method-option-complement {
+  display: none;
 }
 
-#shipping-option-delivery .shp-method-option-text{
+#shipping-option-delivery .shp-method-option-text {
   visibility: hidden;
 }
 
-#shipping-option-delivery .shp-method-option-text:after{
-  content: 'Envío a domicilio';
+#shipping-option-delivery .shp-method-option-text:after {
+  content: "Envío a domicilio";
   visibility: visible;
   position: relative;
   margin-left: -6ch;
   font-size: 15px;
   font-family: Barlow;
-  font-weight: 500;  
+  font-weight: 500;
 }
-.item-unit-label{
-  display:none !important;
+.item-unit-label {
+  display: none !important;
 }
-body .modal.modal-email-template{
+body .modal.modal-email-template {
   background: #fff !important;
 }
-#btn-identified-user-button.identified-user-button{
-  background-color: #008cbe !important;
-      color: #fff !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
+#btn-identified-user-button.identified-user-button {
+  background-color: $maroon-debarricas !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
 }
-#shipping-option-pickup-in-point .shp-method-option-text{
+#shipping-option-pickup-in-point .shp-method-option-text {
   visibility: hidden;
 }
 
-#shipping-option-pickup-in-point .shp-method-option-text:after{
-  content: 'Retiro en tienda';
+#shipping-option-pickup-in-point .shp-method-option-text:after {
+  content: "Retiro en tienda";
   visibility: visible;
   position: relative;
   margin-left: -7ch;
   font-size: 15px;
   font-family: Barlow;
-  font-weight: 500;  
+  font-weight: 500;
 }
 
-#shipping-option-delivery, #shipping-option-pickup-in-point{
+#shipping-option-delivery,
+#shipping-option-pickup-in-point {
   padding: 17px 24px;
 }
 
-#change-pickup-button{
+#change-pickup-button {
   border: solid 2px #000;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-#details-pickup-button{
+#details-pickup-button {
   padding: 0px !important;
   text-decoration: underline;
-  border: none !important;  
+  border: none !important;
 }
 
-.pickup-point-info{
+.pickup-point-info {
   position: relative;
-  background: rgba(242,242,242,0.5);
+  background: rgba(242, 242, 242, 0.5);
 }
 
-.pickup-marker-blue{
+.pickup-marker-blue {
   position: absolute !important;
 }
 
-.vtex-omnishipping-1-x-shippingSectionTitle{
+.vtex-omnishipping-1-x-shippingSectionTitle {
   visibility: hidden;
-  position:  relative !important;
+  position: relative !important;
 }
 
 //Para ocultar los datos del que retirará el pedido
-.shp-pickup-receiver{
+.shp-pickup-receiver {
   display: none !important;
 }
 
-.vtex-omnishipping-1-x-shippingSectionTitle:after{
-  content: 'Opciones de retiro';
+.vtex-omnishipping-1-x-shippingSectionTitle:after {
+  content: "Opciones de retiro";
   visibility: visible;
   position: absolute;
   font-size: 15px;
   font-family: Barlow;
-  font-weight: 300;  
+  font-weight: 300;
   left: 0px;
 }
 
-@media screen and (max-width:770px){
-  .client-phone-mobile{
-    >label{
+@media screen and (max-width: 770px) {
+  .client-phone-mobile {
+    > label {
       display: flex !important;
       width: 40px !important;
     }

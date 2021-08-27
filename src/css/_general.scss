@@ -1,3 +1,4 @@
+@import "colores.scss";
 body {
   background: #f5f5f5 !important;
   overflow-y: hidden;
@@ -30,7 +31,6 @@ body.v-custom-step-payment {
   z-index: 9999 !important;
 }
 a.back-to-store {
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -61,6 +61,13 @@ body.body-cart {
 .brand,
 .table.cart-items tbody tr td.product-name .seller {
   display: none !important;
+}
+.table.cart-items tbody {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 360px;
+  overflow-y: auto;
 }
 body {
   .table.cart-items tbody tr td.product-name {
@@ -94,7 +101,7 @@ body {
       padding: 0 !important;
       height: calc(100vh - 77px - 15px - 30px - 46px - 40px + 25px);
       max-height: 850px;
-      z-index:9999;
+      z-index: 9999;
       > h2 {
         padding: 24px 32px !important;
         border-color: $gray;
@@ -103,7 +110,7 @@ body {
         overflow-y: auto !important;
       }
       .summary-template-holder {
-        border-radius: 0 !important;
+        border-radius: $BorderRadius-debarricas;
         padding: 24px 24px 0;
         box-shadow: 2px -5px 5px 0 rgba(0, 0, 0, 0.05) !important;
       }
@@ -180,7 +187,7 @@ footer {
   padding: 12px 24px !important;
   color: $black !important;
   border: 1px solid $black !important;
-  border-radius: 0 !important;
+  border-radius: $BorderRadius-debarricas;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -197,6 +204,9 @@ footer {
 .client-pre-email .emailInfo {
   width: 100% !important;
 }
+.client-pre-email .emailInfo {
+  border: 0 !important;
+}
 
 .container-main
   > .checkout-container
@@ -212,11 +222,13 @@ footer {
         #client-pre-email {
           width: 100% !important;
           max-width: unset !important;
+          border-radius: 5px;
         }
         #btn-client-pre-email {
           position: unset !important;
           transform: none;
           width: 100% !important;
+          border-radius: 5px;
         }
       }
     }
@@ -356,13 +368,13 @@ footer {
 .required.payment-group-list-btn {
   display: flex;
   flex-direction: column;
-  
+
   .payment-group-item {
     width: 100% !important;
   }
 }
 
-@media screen and (max-width:770px) {
+@media screen and (max-width: 770px) {
   .required.payment-group-list-btn {
     column-gap: 8px !important;
     display: grid !important;
@@ -373,7 +385,7 @@ footer {
 .link-change-shipping.vtex-omnishipping-1-x-summaryChange {
   padding-top: 11px !important;
   padding-bottom: 11px !important;
-  border-radius: 0 !important;
+  border-radius: $BorderRadius-debarricas;
 }
 .orderform-template-holder.span8.profile #client-profile-data {
   box-shadow: 0px 0px 15px #bdbdbd;
@@ -478,11 +490,11 @@ tbody.totalizers-list {
 }
 #cart-choose-products {
   width: 280px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
 }
-.client-pre-email h3.client-pre-email-h span{
+.client-pre-email h3.client-pre-email-h span {
   width: 100% !important;
   display: inline-flex;
   justify-content: center;
