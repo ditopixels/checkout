@@ -1,13 +1,14 @@
 @import "colores";
 footer {
   &::before {
-    content: "";
     background-color: $whitesmoke-debarricas;
     position: absolute;
-    width: 104%;
-    height: 100%;
-    left: -5px;
+    content: "";
+    min-width: 113%;
+    height: 100px;
     z-index: -1;
+    top: -26px;
+    left: -19px;
   }
 
   display: flex;

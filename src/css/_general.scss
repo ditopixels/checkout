@@ -167,6 +167,9 @@ body {
     }
   }
 }
+body.body-cart footer {
+  display: flex !important;
+}
 footer {
   display: none;
 }
