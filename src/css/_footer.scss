@@ -1,21 +1,25 @@
 @import "colores";
+body.body-cart{
+  footer{
+    transform: translateY(-100%);
+    z-index: 100;
+    margin-right: calc(2rem + 30%);
+  }
+}
 footer {
   &::before {
     background-color: $whitesmoke-debarricas;
     position: absolute;
     content: "";
-    min-width: 113%;
+    /*min-width: 113%;
     height: 100px;
     z-index: -1;
     top: -26px;
-    left: -19px;
+    left: -19px;*/
   }
-
+  
   display: flex;
   position: relative;
-  transform: translateY(-100%);
-  z-index: 100;
-  margin-right: calc(2rem + 30%);
   justify-content: space-between;
   padding: 0 2rem;
   max-width: 1450px;

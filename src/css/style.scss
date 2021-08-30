@@ -25,7 +25,7 @@ body {
   margin-right: 0;
   width: 100%;
   margin-top: 20px;
-  background: #018dbb !important;
+  background: #5b0d2e !important;
   border: none !important;
   text-transform: uppercase;
   font-weight: bold;
@@ -156,7 +156,7 @@ body.body-cart .cart-template {
   margin-right: 0;
   width: 100%;
   margin-top: 20px;
-  background: #018dbb !important;
+  background: #5b0d2e !important;
   border: none !important;
   text-transform: uppercase;
   font-weight: bold;
@@ -435,11 +435,11 @@ body.body-cart .cart-template {
     background-color: $whitesmoke-debarricas;
     position: absolute;
     content: "";
-    min-width: 113%;
-    height: calc(7.7vh * 3);
-    right: -30px;
+    width: calc(100% + 40px);
+    height: 100px;
     z-index: -1;
     top: -26px;
+    left: -20px;
   }
   span {
     display: grid !important;
@@ -710,6 +710,11 @@ elemento {
 @import "mobileCustom";
 
 @media screen and (max-width: 770px) {
+  .coupon-fields {
+    span::before {
+      content: unset;
+    }
+  }
   #payment-data .box-step form.form-step {
     flex-direction: column;
     > .payment-group {
