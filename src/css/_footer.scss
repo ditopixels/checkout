@@ -1,9 +1,15 @@
 @import "colores";
+body.v-custom-step-payment{
+  footer{
+    height: 49px !important;
+  }
+}
 body.body-cart{
   footer{
     transform: translateY(-100%);
     z-index: 100;
     margin-right: calc(2rem + 30%);
+    background-color: #F5F5F5;
   }
 }
 footer {
@@ -26,7 +32,7 @@ footer {
   align-items: center;
   p {
     color: #3d3d3d;
-    font-weight: 300;
+    font-weight: 500;
   }
   .text-check {
     display: none;
