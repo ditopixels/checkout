@@ -52,9 +52,11 @@ body.body-cart {
   & {
     background: #fff !important;
   }
-  footer {
-    background-color: #fff !important;
-  }
+
+  //footer {
+  //  background-color: #fff !important;
+  //}
+
   .cart-template.full-cart {
     margin-bottom: 0 !important;
   }
@@ -105,7 +107,8 @@ body {
       z-index: 9999;
       > h2 {
         padding: 24px 32px !important;
-        border-color: $gray;
+        border: 0 !important;
+        background-color: $whitesmoke-debarricas !important;
       }
       .summary-cart-template-holder {
         overflow-y: auto !important;
@@ -150,12 +153,13 @@ body {
     width: 70% !important;
   }
   > div.row-fluid {
-    height: calc(100vh - 77px - 15px - 30px - 46px - 40px - 77px) !important;
+    height: calc(110vh - 80px - 15px - 30px - 46px - 40px - 77px) !important;
     max-height: calc(850px - 54px - 40px);
     overflow-y: auto !important;
     padding: 0 25px 15px;
     width: unset !important;
     background-color: #fff;
+    margin-top: 21px;
   }
   footer {
     width: 100%;
@@ -303,7 +307,7 @@ footer {
 }
 
 .vtex-omnishipping-1-x-summaryChange {
-  border: 1px solid #357edd !important;
+  border: 1px solid $maroon-debarricas !important;
 }
 
 .summary-coupon-wrap {
@@ -401,6 +405,7 @@ footer {
 
 .orderform-template-holder.span8.payment #payment-data {
   box-shadow: 0px 0px 15px #bdbdbd;
+  border-radius: 5px;
 }
 
 .seller.muted {
@@ -446,12 +451,12 @@ footer {
 .orderform-template-holder #payment-data p.link.link-gift-card:hover,
 .orderform-template-holder #payment-data .payment-group-item.active,
 .orderform-template-holder #payment-data .payment-group-item:hover {
-  border: 1px solid #357edd !important;
+  border: 1px solid $maroon-debarricas !important;
 }
 
 .orderform-template-holder #payment-data p.link.link-gift-card.active span,
 .orderform-template-holder #payment-data .payment-group-item.active span {
-  color: #357edd !important;
+  color: $maroon-debarricas !important;
 }
 
 .orderform-template-holder #payment-data p.link.link-gift-card.active span,
@@ -562,6 +567,7 @@ tbody.totalizers-list {
     > .orderform-template-holder {
     &.email #client-profile-data {
       width: 100% !important;
+      border-radius: 5px;
     }
   }
   .client-pre-email-h > label {

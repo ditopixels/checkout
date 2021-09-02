@@ -12,7 +12,7 @@ window.addEventListener("load", () => {});
 document.addEventListener("DOMContentLoaded", () => {
   loadFonts();
   setHeader();
-  loadBreadCrumb();
+  //loadBreadCrumb();
   loadBackToCart();
   loadTargets();
   loadFooter();

@@ -21,7 +21,7 @@
 .logo-check {
   width: 155px;
   height: 45px;
-  object-fit: contain
+  object-fit: contain;
 }
 .text-check {
   display: flex;
@@ -66,11 +66,14 @@
     }
   }
   .header-cart {
+    text-decoration: none !important;
     display: flex;
     justify-content: center;
+    font-weight: bold;
+    text-transform: lowercase;
     ::before {
       content: "";
-      background-image: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg");
+      background-image: url($arrow-cart);
       width: 12px;
       height: 12px;
       background-size: 100%;
@@ -79,7 +82,10 @@
       left: 3rem;
     }
     .back {
-      display: none;
+      display: none !important;
+    }
+    span:first-letter {
+      text-transform: uppercase;
     }
     span::before {
       content: unset !important;

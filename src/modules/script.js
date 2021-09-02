@@ -49,7 +49,7 @@ let count = false;
 export function loadTargets() {
   setGeneral();
   const headerCart = d.querySelector("a.header-cart");
-  const breadcrumb = d.querySelector("div.breadcrumb");
+  //const breadcrumb = d.querySelector("div.breadcrumb");
   const footer = d.querySelector("body > footer");
   const containerBuyBtn = d.querySelector(".cart-links-bottom");
   const backToStore = d.createElement("a");
@@ -61,7 +61,7 @@ export function loadTargets() {
     count = true;
   }
 
-  breadcrumb.style.display = null;
+  //breadcrumb.style.display = null;
   headerCart.style.display = null;
 
   var argTelSection = document.getElementsByClassName("argentina-phone")[0];
@@ -77,20 +77,28 @@ export function loadTargets() {
       secInput.removeChild(labelTel);
     }
   }
-
+  function OnChange() {
+    //console.log(screen.width);
+    if (screen.width <= 768) {
+      footer.classList.add("FooterMobile");
+      footer.classList.remove("FooterDesk");
+    } else {
+      footer.classList.add("FooterDesk");
+      footer.classList.remove("FooterMobile");
+    }
+  }
   switch (location.hash) {
     case "#/email":
       deleteSections();
       showEmail();
       document.body.classList.add("blanco");
       headerCart.style.display = "flex";
-      breadcrumb.style.display = "none";
+      //breadcrumb.style.display = "none";
       if (footer) footer.style.display = "flex";
       footer.style.margin = "0";
       HeaderCart.classList.add("hidden");
       break;
     case "#/profile":
-
       deleteEmail();
       showSections();
       if (footer) footer.style.display = null;
@@ -121,7 +129,10 @@ export function loadTargets() {
       //loadFooter()
       break;
     case "#/cart":
-      HeaderCart.classList.add("hidden");
+      //Llamando a la funcion al momento de cambiar de tamaño
+      OnChange();
+      window.addEventListener("resize", OnChange);
+      headerCart.classList.add("OcultarDisplay");
       document.body.style.overflowY = "auto";
       document.body.classList.add("blanco");
       if (footer) footer.style.display = "flex";
@@ -162,10 +173,10 @@ export function showSections() {
   payment.style.display = null;
   email.style.display = null;
 }
-
+/*
 export function loadBreadCrumb() {
   const panel = d.querySelector(".orderform-template-holder > .row-fluid");
-  const breadcrumb = d.createElement("div");
+  //const breadcrumb = d.createElement("div");
   const navProfile = d.createElement("div");
   const navShipping = d.createElement("div");
   const navPayment = d.createElement("div");
@@ -174,7 +185,7 @@ export function loadBreadCrumb() {
   navShipping.textContent = "Métodos de entrega";
   navPayment.textContent = "Método de pago";
 
-  breadcrumb.classList.add("breadcrumb");
+  //breadcrumb.classList.add("breadcrumb");
   navProfile.classList.add("breadcrumb-profile");
   navPayment.classList.add("breadcrumb-payment");
   navShipping.classList.add("breadcrumb-shipping");
@@ -184,7 +195,7 @@ export function loadBreadCrumb() {
   breadcrumb.appendChild(navPayment);
 
   panel.insertAdjacentElement("beforebegin", breadcrumb);
-}
+}*/
 
 export function loadBackToCart() {
   const headerCart = d.createElement("a");

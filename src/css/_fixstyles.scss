@@ -1,0 +1,79 @@
+@import "colores";
+
+.bank-invoice-pagofacil {
+  background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/pagofacil.png);
+  font-size: 0px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bank-invoice-rapipago {
+  background: url(https://sanisidrolonasar.vteximg.com.br/arquivos/rapipago.png);
+  font-size: 0px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cart-totalizers table.table > tfoot {
+  position: unset !important;
+}
+
+.client-phone > div > .input #client-phone3 {
+  width: calc(100% - 50px - 16px - 7px) !important;
+}
+.OcultarDisplay {
+  display: none !important;
+}
+.FooterMobile {
+  margin-right: 0 !important;
+  margin-top: 22vh;
+  background-color: $whitesmoke-debarricas !important;
+  .text-check {
+    color: $black;
+    .txt-header {
+      color: $black;
+    }
+  }
+}
+.FooterDesk {
+  background-color: $white !important;
+}
+
+li.hproduct.item.muted {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(7, 2vh);
+
+  .url {
+    grid-column: 1/5;
+    justify-self: center;
+    grid-row: 3/-1;
+  }
+  .fn.product-name {
+    grid-column: 4/-1;
+    grid-row: 2/4;
+    font-size: 14px;
+  }
+  .description {
+    grid-column: 4/-1;
+    grid-row: 4/-1;
+    justify-self: self-start;
+  }
+
+  .quantity.badge {
+    background-color: $maroon-debarricas;
+    height: 16px;
+    min-width: 23px !important;
+    color: $white !important;
+    font-weight: bold;
+    font-size: 15px;
+    padding-block-start: 7px;
+    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    left: 6px;
+  }
+}
