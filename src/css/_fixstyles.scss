@@ -77,3 +77,16 @@ li.hproduct.item.muted {
     left: 6px;
   }
 }
+
+.orderform-template-holder #payment-data .payment-group-item.active:after,
+.orderform-template-holder #payment-data .payment-group-item.active:before {
+  //content: "";
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
