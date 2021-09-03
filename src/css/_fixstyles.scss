@@ -38,7 +38,17 @@
   }
 }
 .FooterDesk {
-  background-color: $white !important;
+  transform: translateY(-100%);
+  z-index: 100;
+  background-color: $whitesmoke-debarricas;
+  width: calc(100% - 30%);
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em !important;
+  position: relative;
+  left: -2em;
+  box-shadow: inset -6px 0 6px -5px #0000004a;
 }
 
 li.hproduct.item.muted {

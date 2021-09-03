@@ -78,8 +78,8 @@ export function loadTargets() {
     }
   }
   function OnChange() {
-    //console.log(screen.width);
-    if (screen.width <= 768) {
+    //console.log(screen.availWidth);
+    if (screen.width <= 998) {
       footer.classList.add("FooterMobile");
       footer.classList.remove("FooterDesk");
     } else {
@@ -87,16 +87,26 @@ export function loadTargets() {
       footer.classList.remove("FooterMobile");
     }
   }
+  function Remove() {
+    footer.style.backgroundColor = "#fff";
+    footer.style.boxShadow = "none";
+    footer.style.minWidth = "100%";
+  }
+
+  let Exist = document.getElementById("cart-choose-products");
+  console.log(Exist);
   switch (location.hash) {
     case "#/email":
       deleteSections();
       showEmail();
+      Remove();
+      OnChange();
+
+      headerCart.classList.remove("OcultarDisplay");
       document.body.classList.add("blanco");
       headerCart.style.display = "flex";
-      //breadcrumb.style.display = "none";
       if (footer) footer.style.display = "flex";
       footer.style.margin = "0";
-      HeaderCart.classList.add("hidden");
       break;
     case "#/profile":
       deleteEmail();
