@@ -490,8 +490,21 @@ body.body-cart .cart-template {
 .shipping-date {
   display: none !important;
 }
+span.new-product-price{
+  color: #000000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+}
 .total-selling-price {
-  font-size: 15px !important;
+  font-size: 20px !important;
+  color: #000000;
+  font-family: Roboto;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
 }
 /* De los pasos del pago (Texto) */
 .accordion-toggle {
@@ -680,6 +693,11 @@ body.body-cart .cart-template {
   display: block !important;
   margin-left: 5em;
 }
+
+th.quantity-price {
+  text-align: left !important;
+}
+
 .new-product-real-price-per-unit {
   display: none;
 }

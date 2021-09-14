@@ -73,8 +73,25 @@ body.body-cart {
   overflow-y: auto;
 }
 body {
+  .table.cart-items thead tr th {
+    color: #424242;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
   .table.cart-items tbody tr td.product-name {
     width: calc(30% - 80px) !important;
+  }
+  .table.cart-items tbody tr td.product-name a#product-name2 {
+    color: #424242;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 20px;
   }
   .table.cart-items thead tr th.product {
     width: 30% !important;

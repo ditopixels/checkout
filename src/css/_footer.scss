@@ -12,6 +12,30 @@ body.body-cart {
     background-color: #f5f5f5;
   }
 }
+
+@media screen and (max-width: 770px) {
+  .FooterDesk {
+    transform: translateY(-100%);
+    z-index: 100;
+    margin-right: calc(2rem + 30%);
+    background-color: #f5f5f5;
+  }
+}
+@media screen and (min-width: 1020px ) and (max-width: 1410px ) {
+  .FooterDesk {
+    margin: 0 calc(70% - 430px) 0 auto;
+    max-width: 986px;
+  }
+}
+
+@media screen and (min-width: 1410px ) {
+  .FooterDesk {
+    margin: 0 calc(56.5% - 411px) 0 auto !important;
+    max-width: 942px;
+    box-shadow: initial !important;
+  }
+}
+
 footer {
   &::before {
     background-color: $whitesmoke-debarricas;
