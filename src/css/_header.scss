@@ -1,85 +1,28 @@
 @import "colores";
 
-.header-check {
-  width: 100%;
-  height: 45px;
+.container-header{
   display: flex;
-  position: relative;
-  justify-content: flex-end;
-  margin: 0 auto;
-  padding: 15px 0;
-  background-color: #f5f5f5;
-  max-width: 1450px;
-  z-index: 100;
-}
-.img-logo {
-  position: absolute;
-  width: 95%;
-  display: flex;
-  justify-content: center;
-}
-.logo-check {
-  width: 155px;
-  height: 45px;
-}
-.text-check {
-  display: flex;
-  align-items: center;
-  column-gap: 7px;
-  padding-right: 35px;
-}
-.txt-header {
-  font-size: 12px;
-  color: #424242;
-  font-weight: 300;
-}
-
-.header-cart {
-  display: none;
   justify-content: space-between;
+  padding: 0 5%;
+  height: 13.8vh;
+  border-bottom: 2px solid;
   align-items: center;
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
-  padding: 0 3rem;
-  background-color: $white;
-  position: relative;
-  z-index: 999;
-  height: 64px;
-  > div {
+  img{
+    width: auto;
+    height: 8.6vh;
+  }
+  .seguro{
     display: flex;
-    column-gap: 10px;
     align-items: center;
-    font-size: 20px;
-  }
-  img {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  header {
-    .text-check {
-      display: none;
-      padding-right: 0px;
+    gap: 8px;
+    img{
+      width: auto;
+      height: 5.7vh;
     }
-  }
-  .header-cart {
-    display: flex;
-    justify-content: center;
-    ::before {
-      content: "";
-      background-image: url("https://sanisidrolonasar.vtexassets.com/assets/vtex.file-manager-graphql/images/b83a386e-502a-4ffb-8774-32e1b8d331f0___89b04cb0740f44e8ca86a35f5dd19c0a.svg");
-      width: 12px;
-      height: 12px;
-      background-size: 100%;
-      position: absolute;
-      transform: rotate(-180deg);
-      left: 3rem;
-    }
-    .back {
-      display: none;
-    }
-    span::before {
-      content: unset !important;
+    h1{
+      color: #000;
+      font-size: 1.9vh;
+      line-height: 2.5vh;
     }
   }
 }

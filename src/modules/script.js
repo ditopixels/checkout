@@ -24,7 +24,7 @@ export function setHeader() {
   const panel = d.querySelector(".cart-template-holder");
   const selector = d.createElement("div");
   selector.innerHTML =
-    "<div class='cartHeaderCustom'> <img src='/arquivos/logo-cart.png'> <p>MI CARRITO</p> </div>";
+    "<div class='finish-C'><h2>Finalizar la compra</h2><div class='content-f'><div><h1>1</h1><p>resumen de la compra</p></div><div><h1>2</h1><p>ingresa tu email</p></div><div><h1>3</h1><p>envío y pago</p></div><div><h1>4</h1><p>pedido confirmado</p></div></div></div>";
   //selector.innerText = "Hellow";
   panel.insertAdjacentElement("afterbegin", selector);
 }

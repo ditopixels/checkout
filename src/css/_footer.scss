@@ -1,47 +1,49 @@
-footer{
+.footer{
+    background-color: #e8e8e8;
     display: flex;
     justify-content: space-between;
-    padding:0 2rem;
-    max-width: 1450px;
-    align-items:center;
-    margin: 0 auto;
-    p{
-        color: #3D3D3D;
-        font-weight: 300;
-    }
-    .text-check{
-        display: none;
-    }
-}
-.email{
-    footer{
-        display: none !important;
-    }
-}
-@media screen and (max-width:770px) {
-    footer{
-        padding: 0 2rem 1rem;
-        flex-direction: column;
+    padding: 0 5%;
+    align-items: center;
+    height: 111px;
+    .metodos-pago{
+        display: flex;
+        height: 55px;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        .text-check{
-            display: flex;
+        gap: 21px;
+        h1{
+            font-size: 12px;
+            line-height: initial;
+            margin: 0;
+        }
+        img:nth-child(2){
+            height: 22px;
+        }
+        img:nth-child(3){
+            height: 55px;
+        }
+        img:nth-child(4){
+            height: 44px;
+        }
+        img:nth-child(5){
+            height: 25px;
         }
     }
-}
-@media screen and (min-width:770px) {
-    body.body-cart{
-        footer{
-            padding:0 0rem;
-            p{
-                margin-left: 2rem;
-            }
-            img{
-                margin-right: calc(2rem + 30%);
-                margin-top:10px;
-                margin-bottom: 10px;
-            }
+    .derechos{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        h1{
+            font-size: 12px;
+            line-height: initial;
+            margin: 0;
+        }
+        .PT-2,
+        .PT{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            gap: 5px;
         }
     }
 }
