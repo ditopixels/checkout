@@ -45,7 +45,6 @@ export function setGeneral() {
 let count = false;
 export function loadTargets() {
   setGeneral();
-  const headerCart = d.querySelector("a.header-cart");
   const breadcrumb = d.querySelector("div.breadcrumb");
   const footer = d.querySelector("body > footer");
   const containerBuyBtn = d.querySelector(".cart-links-bottom");
@@ -269,7 +268,6 @@ export function loadBackToCart() {
   wrapperCart.appendChild(cart);
   wrapperCart.appendChild(myCart);
 
-  headerCart.classList.add("header-cart");
   headerCart.appendChild(wrapperCart);
   headerCart.appendChild(back);
 
@@ -287,3 +285,4 @@ export function loadFooter() {
 
   panel.insertAdjacentElement("beforeend", footer);
 }
+
